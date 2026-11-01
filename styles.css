@@ -70,6 +70,12 @@ a {
   letter-spacing: 0.05em;
 }
 
+.brand-symbol img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .brand p {
   margin: 0.75rem 0 2.5rem 3.25rem;
   color: #dfcce9;
@@ -118,6 +124,13 @@ nav ul {
 
 .sidebar-footer {
   margin-top: auto;
+}
+
+.ualbany-logo {
+  display: block;
+  width: min(100%, 7rem);
+  height: auto;
+  margin: 0 0 1.5rem;
 }
 
 .sidebar address {
