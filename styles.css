@@ -654,6 +654,217 @@ main {
   background: #46166b;
 }
 
+.equipment-detail-panel {
+  max-width: 72rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e4dfea;
+  border-radius: 0.65rem;
+  box-shadow: 0 0.25rem 1rem rgb(44 24 61 / 5%);
+}
+
+.equipment-detail-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e8e2ec;
+}
+
+.equipment-detail-icon {
+  display: inline-grid;
+  width: 4.25rem;
+  height: 4.25rem;
+  place-items: center;
+  color: #46166b;
+  background: #f1ebf6;
+  border-radius: 0.5rem;
+}
+
+.equipment-detail-icon svg {
+  width: 2.25rem;
+  height: 2.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.equipment-id,
+.equipment-target span {
+  margin: 0 0 0.3rem;
+  color: #6b6474;
+  font-size: 0.75rem;
+}
+
+.equipment-detail-heading h2 {
+  margin: 0 0 0.65rem;
+  color: #2b2034;
+  font-size: 1.5rem;
+}
+
+.equipment-target {
+  margin-left: auto;
+  text-align: right;
+}
+
+.equipment-target strong {
+  display: block;
+  color: #2b2034;
+}
+
+.detail-steps {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #e8e2ec;
+}
+
+.detail-steps a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.7rem;
+  color: #6b6474;
+  border-radius: 0.35rem;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.detail-steps a.current {
+  color: #46166b;
+  background: #f1ebf6;
+  font-weight: 700;
+}
+
+.detail-steps span {
+  display: inline-grid;
+  width: 1.35rem;
+  height: 1.35rem;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.7rem;
+}
+
+.detail-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+
+.detail-columns h3 {
+  margin: 0 0 1rem;
+  color: #2b2034;
+  font-size: 1rem;
+}
+
+.detail-list {
+  margin: 0;
+}
+
+.detail-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #eeeaf1;
+}
+
+.detail-list dt {
+  color: #6b6474;
+  font-size: 0.85rem;
+}
+
+.detail-list dd {
+  margin: 0;
+  color: #2b2034;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.required-steps {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.required-steps li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #2b2034;
+  font-size: 0.85rem;
+}
+
+.required-steps strong {
+  margin-left: auto;
+  color: #9a6500;
+  font-size: 0.75rem;
+}
+
+.step-check {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #9a8da4;
+  border-radius: 50%;
+}
+
+.details-label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #2b2034;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.equipment-detail-panel textarea {
+  width: 100%;
+  padding: 0.75rem;
+  color: #2b2034;
+  border: 1px solid #cfc5d6;
+  border-radius: 0.35rem;
+  font: inherit;
+  resize: vertical;
+}
+
+.detail-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.secondary-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1rem;
+  color: #46166b;
+  background: #fff;
+  border: 1px solid #cdbbd8;
+  border-radius: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.secondary-action svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
 .preparation-panel > table td:nth-child(2) .status-badge.ready {
   color: #26734d;
   background: #e8f5ed;
