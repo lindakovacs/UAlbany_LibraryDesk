@@ -454,6 +454,30 @@ main {
   cursor: pointer;
 }
 
+.preparation-panel .tab-link {
+  display: inline-block;
+  flex: 0 0 auto;
+  padding: 0.55rem 0.75rem;
+  color: #6b6474;
+  border: 1px solid transparent;
+  border-radius: 0.35rem;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.preparation-panel .tab-link.active-tab {
+  color: #46166b;
+  border-color: #46166b;
+  background: #f1ebf6;
+  font-weight: 700;
+}
+
+.preparation-panel .tab-link span {
+  margin-left: 0.35rem;
+  color: #8762a4;
+  font-size: 0.7rem;
+}
+
 .preparation-panel .tabs button[aria-selected="true"] {
   color: #46166b;
   background: #f1ebf6;
@@ -566,6 +590,15 @@ main {
   font-weight: 700;
 }
 
+.status-badge.in-progress {
+  color: #46166b;
+  background: #f1ebf6;
+}
+
+.status-badge.in-progress::before {
+  background: #46166b;
+}
+
 .status-badge::before {
   width: 0.35rem;
   height: 0.35rem;
@@ -579,9 +612,18 @@ main {
   color: #9a6500;
 }
 
+.preparation-panel > table td:nth-child(2) .status-badge.in-progress {
+  color: #46166b;
+  background: #f1ebf6;
+}
+
 .preparation-panel > table td:nth-child(2) .status-badge::before {
   display: block;
   margin-right: 0.45rem;
+}
+
+.preparation-panel > table td:nth-child(2) .status-badge.in-progress::before {
+  background: #46166b;
 }
 
 .preparation-panel > table small {
