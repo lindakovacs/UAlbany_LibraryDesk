@@ -1,6 +1,6 @@
 :root {
   color: #252525;
-  background: #f5f7fa;
+  background: #f1ebf6;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -179,7 +179,11 @@ main,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 0 1.5rem;
+  width: 100%;
+  margin-inline: 0;
+  min-height: 5rem;
+  padding: 0 2rem;
+  background: #ffffff;
   border-bottom: 1px solid #dfe3e8;
 }
 
@@ -201,15 +205,91 @@ h2 {
 
 .header-actions {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.75rem;
   color: #46166b;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .header-actions a,
 .section-heading a {
   font-weight: 700;
   text-decoration: none;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: #6b6474;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs strong {
+  color: #252525;
+  font-weight: 400;
+}
+
+.library-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  color: #46166b;
+  background: #f1ebf6;
+  border-radius: 0.3rem;
+  font-size: 0.75rem;
+}
+
+.status-dot {
+  width: 0.35rem;
+  height: 0.35rem;
+  background: #46166b;
+  border-radius: 50%;
+}
+
+.notification-link {
+  color: #252525;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.profile-divider {
+  width: 1px;
+  height: 2.5rem;
+  background: #e1e5e9;
+}
+
+.profile-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #252525;
+}
+
+.profile-summary > span:nth-child(2) {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.profile-summary strong {
+  font-weight: 400;
+}
+
+.profile-summary small {
+  color: #6b6474;
+  font-size: 0.7rem;
+}
+
+.profile-initials {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  color: #46166b;
+  background: #f1ebf6;
+  border-radius: 50%;
+  font-size: 0.75rem;
 }
 
 .header-actions a:hover,
@@ -423,7 +503,7 @@ tbody tr:last-child td {
   min-width: 0;
   place-items: center;
   padding: clamp(3rem, 8vh, 6rem) clamp(2rem, 4vw, 4rem);
-  background: #fbf9fd;
+  background: #f1ebf6;
 }
 
 .login-card {
@@ -552,6 +632,7 @@ tbody tr:last-child td {
     align-items: flex-start;
     flex-direction: column;
     gap: 1rem;
+    padding-block: 1.25rem;
   }
 
   .summary-list {

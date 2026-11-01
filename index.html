@@ -66,14 +66,30 @@
 
       <div class="page-container">
         <header class="page-header">
-          <div>
-            <p class="eyebrow">University Library</p>
-            <h1>Overview</h1>
-          </div>
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <span>Staff workspace</span>
+            <span aria-hidden="true">›</span>
+            <strong>Overview</strong>
+          </nav>
+
           <div class="header-actions">
-            <a href="/notifications.html">Notifications</a>
-            <a href="/profile.html">Staff profile</a>
+            <span class="library-status">
+              <span class="status-dot" aria-hidden="true"></span>
+              Library open
+            </span>
+            <a class="notification-link" href="/notifications.html" aria-label="Notifications">
+              <span aria-hidden="true">&#128276;</span>
+            </a>
             <a href="login.html">Sign out</a>
+            <span class="profile-divider" aria-hidden="true"></span>
+            <a class="profile-summary" href="/profile.html">
+              <span class="profile-initials" aria-hidden="true">LK</span>
+              <span>
+                <strong>Linda Kovacs</strong>
+                <small>Library staff</small>
+              </span>
+              <span aria-hidden="true">⌄</span>
+            </a>
           </div>
         </header>
 
