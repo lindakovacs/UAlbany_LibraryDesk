@@ -583,20 +583,20 @@ main {
   display: inline-flex;
   align-items: center;
   padding: 0.35rem 0.65rem;
-  color: #9a6500;
-  background: #fff3d8;
+  color: #a4262c;
+  background: #fde8e8;
   border-radius: 0.3rem;
   font-size: 0.75rem;
   font-weight: 700;
 }
 
 .status-badge.in-progress {
-  color: #46166b;
-  background: #f1ebf6;
+  color: #9a6500;
+  background: #fff3d8;
 }
 
 .status-badge.in-progress::before {
-  background: #46166b;
+  background: #b27800;
 }
 
 .status-badge.in-review {
@@ -621,18 +621,19 @@ main {
   width: 0.35rem;
   height: 0.35rem;
   margin-right: 0.45rem;
-  background: #b27800;
+  background: #c43d43;
   border-radius: 50%;
   content: "";
 }
 
 .preparation-panel > table td:nth-child(2) .status-badge {
-  color: #9a6500;
+  color: #a4262c;
+  background: #fde8e8;
 }
 
 .preparation-panel > table td:nth-child(2) .status-badge.in-progress {
-  color: #46166b;
-  background: #f1ebf6;
+  color: #9a6500;
+  background: #fff3d8;
 }
 
 .preparation-panel > table td:nth-child(2) .status-badge.in-review {
@@ -646,7 +647,7 @@ main {
 }
 
 .preparation-panel > table td:nth-child(2) .status-badge.in-progress::before {
-  background: #46166b;
+  background: #b27800;
 }
 
 .preparation-panel > table td:nth-child(2) .status-badge.in-review::before {
