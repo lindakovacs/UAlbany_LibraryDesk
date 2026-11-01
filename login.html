@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Sign in to the UAlbany Libraries equipment borrowing staff workspace."
+    >
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <title>LibraryDesk | Staff Sign In</title>
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="login-side" aria-labelledby="login-introduction">
+        <a class="brand" href="index.html" aria-label="LibraryDesk home">
+          <span class="brand-symbol" aria-hidden="true">
+            <img src="assets/favicon.svg" alt="">
+          </span>
+          <span>
+            <strong>LibraryDesk</strong>
+            <small>University Libraries</small>
+          </span>
+        </a>
+
+        <div>
+          <h1 id="login-introduction">Equipment borrowing, made simple.</h1>
+          <p>
+            Check out, track, and return library equipment for the UAlbany
+            community.
+          </p>
+        </div>
+
+        <div class="login-institution">
+          <img
+            class="login-ualbany-logo"
+            src="assets/UAlbany_logo.svg"
+            alt="University at Albany"
+          >
+          <p>
+            University at Albany<br>
+            1400 Washington Avenue<br>
+            Albany, NY, 12222 USA
+          </p>
+        </div>
+      </section>
+
+      <section class="login-main" aria-labelledby="sign-in-heading">
+        <form class="login-card" action="index.html" method="get">
+          <h2 id="sign-in-heading">Authorized Library Staff Sign in</h2>
+          <p>Use your UAlbany NetID to access the staff workspace.</p>
+
+          <div class="form-field">
+            <label for="netid">NetID</label>
+            <input
+              id="netid"
+              name="netid"
+              type="text"
+              placeholder="e.g. lkovacs"
+              autocomplete="username"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+            >
+          </div>
+
+          <button type="submit">Sign in</button>
+
+          <p>
+            <small>Prototype: any NetID and password will sign you in.</small>
+          </p>
+        </form>
+      </section>
+
+      <footer class="login-footer">
+        <p>
+          &copy; 2026 UAlbany Library | Team KofN1: Linda Kovacs, Veronica
+          Dindial, Rym Mahiddine, Wendy Ouedraogo, Amari Scott
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
