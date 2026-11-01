@@ -865,6 +865,75 @@ main {
   stroke-width: 1.8;
 }
 
+.assignment-form {
+  padding-top: 1.5rem;
+}
+
+.assignment-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.assignment-form label,
+.assignment-form h3 {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #2b2034;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.assignment-form select,
+.assignment-form input[type="date"],
+.assignment-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  color: #2b2034;
+  background: #fff;
+  border: 1px solid #cfc5d6;
+  border-radius: 0.35rem;
+  font: inherit;
+}
+
+.assignment-form h3 {
+  margin-top: 1.75rem;
+}
+
+.task-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.task-options input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #46166b;
+}
+
+.assignment-form textarea {
+  display: block;
+  resize: vertical;
+}
+
+.assignment-form .primary-action {
+  gap: 0.5rem;
+}
+
+.assignment-form .primary-action svg {
+  margin: 0;
+}
+
 .preparation-panel > table td:nth-child(2) .status-badge.ready {
   color: #26734d;
   background: #e8f5ed;
