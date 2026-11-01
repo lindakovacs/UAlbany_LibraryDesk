@@ -608,6 +608,15 @@ main {
   background: #46166b;
 }
 
+.status-badge.ready {
+  color: #26734d;
+  background: #e8f5ed;
+}
+
+.status-badge.ready::before {
+  background: #26734d;
+}
+
 .status-badge::before {
   width: 0.35rem;
   height: 0.35rem;
@@ -642,6 +651,15 @@ main {
 
 .preparation-panel > table td:nth-child(2) .status-badge.in-review::before {
   background: #46166b;
+}
+
+.preparation-panel > table td:nth-child(2) .status-badge.ready {
+  color: #26734d;
+  background: #e8f5ed;
+}
+
+.preparation-panel > table td:nth-child(2) .status-badge.ready::before {
+  background: #26734d;
 }
 
 .preparation-panel > table small {
