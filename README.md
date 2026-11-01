@@ -1,6 +1,8 @@
-# UAlbany LibraryDesk
+# UAlbany LibraryDesk (Static UI)
 
 UAlbany LibraryDesk is an Equipment and Resource Management System designed to improve the tracking, preparation, sanitation, assignment, and reporting of library equipment. The system addresses challenges identified during stakeholder interviews related to equipment readiness, accountability, historical usage reporting, and workflow visibility.
+
+Static Site Deployed via [GitHub Pages](https://lindakovacs.github.io/UAlbany_LibraryDesk/)
 
 ## Development approach
 
@@ -32,3 +34,5 @@ validation, database, and GitHub Pages.
 ## Project Links
 
 [Figma Prototype](https://www.figma.com/proto/hOLNuCHjmtsA7JDbaTkGuS/UAlbany-LibraryDesk?node-id=81-259&p=f&t=FXax9FUBmLrjkIsb-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=81%3A259)
+
+[Static Site](https://lindakovacs.github.io/UAlbany_LibraryDesk/)
