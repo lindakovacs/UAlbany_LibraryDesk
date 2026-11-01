@@ -15,6 +15,11 @@ body {
   min-width: 320px;
 }
 
+html,
+body {
+  min-height: 100%;
+}
+
 a {
   color: inherit;
 }
@@ -76,10 +81,20 @@ a {
   height: 100%;
 }
 
-.brand p {
-  margin: 0.75rem 0 2.5rem 3.25rem;
+.brand-copy {
+  display: block;
+}
+
+.brand-copy small {
+  display: block;
+  margin-top: 0.2rem;
   color: #dfcce9;
   font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.sidebar > .brand {
+  margin-bottom: 2rem;
 }
 
 .nav-label,
@@ -328,6 +343,184 @@ tbody tr:last-child td {
   text-align: center;
 }
 
+.login-page {
+  position: relative;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  /* height: 100dvh; */
+  min-height: 100dvh;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.login-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(2rem, 5vh, 4rem) clamp(2rem, 4vw, 3.5rem);
+  color: #ffffff;
+  background: #46166b;
+}
+
+.login-side .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+}
+
+.login-side .brand-symbol {
+  flex: 0 0 auto;
+  background: #fdbb30;
+}
+
+.login-side .brand strong,
+.login-side .brand small {
+  display: block;
+}
+
+.login-side .brand small {
+  margin-top: 0.2rem;
+  color: #dfcce9;
+  font-size: 0.75rem;
+}
+
+.login-side h1 {
+  max-width: 23rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.4rem, 1.75vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.login-side p {
+  max-width: 28rem;
+  color: #dfcce9;
+  font-size: 0.9rem;
+}
+
+.login-institution {
+  display: grid;
+  justify-items: start;
+  gap: 0.5rem;
+}
+
+.login-ualbany-logo {
+  display: block;
+  width: 7rem;
+  height: auto;
+}
+
+.login-institution p {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+
+.login-main {
+  display: grid;
+  min-width: 0;
+  place-items: center;
+  padding: clamp(3rem, 8vh, 6rem) clamp(2rem, 4vw, 4rem);
+  background: #fbf9fd;
+}
+
+.login-card {
+  width: min(100%, 30rem);
+}
+
+.login-card h2 {
+  margin-bottom: 0.5rem;
+  color: #252525;
+  font-size: clamp(1.4rem, 1.75vw, 1.6rem);
+  font-weight: 400;
+}
+
+.login-card > p {
+  margin-bottom: 2rem;
+  color: #5f6872;
+  font-size: 0.9rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.form-field label {
+  color: #252525;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.form-field input {
+  width: 100%;
+  min-height: 2.6rem;
+  padding: 0.7rem 0.85rem;
+  color: #252525;
+  background: #ffffff;
+  border: 1px solid #aeb7c0;
+  border-radius: 0.4rem;
+  font: inherit;
+}
+
+.form-field input:focus {
+  border-color: #46166b;
+  outline: 0.2rem solid rgb(70 22 107 / 18%);
+}
+
+.login-card button {
+  width: 100%;
+  min-height: 2.6rem;
+  margin-top: 1.75rem;
+  padding: 0.7rem 1rem;
+  color: #ffffff;
+  background: #46166b;
+  border: 0;
+  border-radius: 0.3rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #73459a;
+}
+
+.login-card button:focus-visible {
+  outline: 0.2rem solid #fdbb30;
+  outline-offset: 0.2rem;
+}
+
+.login-card p:last-child {
+  margin: 1.25rem 0 0;
+  text-align: center;
+}
+
+.login-card small {
+  color: #5f6872;
+}
+
+.login-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0.7rem 1rem;
+  color: #fdbb30;
+  background: transparent;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.login-footer p {
+  margin: 0;
+}
+
 @media (max-width: 800px) {
   .app-shell {
     display: block;
@@ -363,6 +556,26 @@ tbody tr:last-child td {
 
   .summary-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .login-page {
+    height: auto;
+    min-height: 100dvh;
+    grid-template-columns: 1fr;
+  }
+
+  .login-side {
+    min-height: 22rem;
+    padding: 2rem;
+  }
+
+  .login-main {
+    min-height: 32rem;
+    padding-block: 4rem;
+  }
+
+  .login-footer {
+    position: static;
   }
 }
 
