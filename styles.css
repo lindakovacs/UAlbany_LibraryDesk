@@ -1438,6 +1438,112 @@ main {
   color: #c43d43;
 }
 
+.borrowers-introduction {
+  max-width: none;
+  margin-bottom: 2rem;
+}
+
+.borrower-panel .section-heading {
+  align-items: flex-end;
+}
+
+.borrower-panel .section-heading p {
+  margin: 0;
+  color: #6b6474;
+  font-size: 0.8rem;
+}
+
+.borrower-tools {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: min(100%, 22rem);
+}
+
+.borrower-tools label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.borrower-tools span {
+  margin-right: -2rem;
+  z-index: 1;
+  color: #6b6474;
+}
+
+.borrower-tools input {
+  width: 100%;
+  min-height: 2.4rem;
+  padding: 0.65rem 0.75rem 0.65rem 2.2rem;
+  border: 1px solid #cfc5d6;
+  border-radius: 0.35rem;
+  font: inherit;
+}
+
+.borrower-tools input:focus {
+  border-color: #46166b;
+  outline: 0.2rem solid rgb(70 22 107 / 18%);
+}
+
+.borrower-table-container {
+  overflow-x: auto;
+}
+
+.borrower-table-container table {
+  min-width: 46rem;
+}
+
+.borrower-profile {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #252525;
+}
+
+.borrower-initials {
+  display: inline-grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  color: #46166b;
+  background: #f1ebf6;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.borrower-status {
+  display: inline-flex;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.borrower-status.good {
+  color: #26734d;
+  background: #e8f5ed;
+}
+
+.borrower-status.overdue {
+  color: #a4262c;
+  background: #fde8e8;
+}
+
+.borrower-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  color: #6b6474;
+  border-top: 1px solid #e1e5e9;
+  font-size: 0.75rem;
+}
+
 .equipment-introduction {
   position: relative;
   max-width: none;
@@ -1855,17 +1961,18 @@ tbody tr:last-child td {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  /* height: 100dvh; */
-  min-height: 100dvh;
+  min-height: 100vh;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 .login-side {
+  grid-column: 1;
+  grid-row: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(2rem, 5vh, 4rem) clamp(2rem, 4vw, 3.5rem);
+  min-width: 0;
+  padding: clamp(2rem, 5vh, 3.5rem) clamp(2rem, 4vw, 3.5rem);
   color: #ffffff;
   background: #46166b;
 }
@@ -1902,9 +2009,9 @@ tbody tr:last-child td {
 }
 
 .login-side p {
-  max-width: 28rem;
+  max-width: 32rem;
   color: #dfcce9;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .login-institution {
@@ -1925,8 +2032,14 @@ tbody tr:last-child td {
 }
 
 .login-main {
+  grid-column: 2;
+  grid-row: 1;
   display: grid;
-  grid-column: 1 / -1;
+  align-items: center;
+  justify-items: center;
+  min-width: 0;
+  padding: clamp(2rem, 5vw, 5rem);
+  background: #fbf9fd;
 }
 
 .login-card {
@@ -2007,17 +2120,7 @@ tbody tr:last-child td {
 }
 
 .login-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0.7rem 1rem;
-  color: #fdbb30;
-  background: transparent;
-  font-size: 0.75rem;
-  text-align: center;
+  display: none;
 }
 
 .login-footer p {
@@ -2095,6 +2198,15 @@ tbody tr:last-child td {
     width: 100%;
   }
 
+  .borrower-panel .section-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .borrower-tools {
+    width: 100%;
+  }
+
   .login-page {
     height: auto;
     min-height: 100dvh;
@@ -2107,8 +2219,10 @@ tbody tr:last-child td {
   }
 
   .login-main {
+    grid-column: 1;
+    grid-row: 2;
     min-height: 32rem;
-    padding-block: 4rem;
+    padding: 4rem 1.5rem;
   }
 
   .login-footer {
