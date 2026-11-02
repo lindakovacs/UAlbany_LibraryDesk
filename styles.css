@@ -2237,52 +2237,6 @@ tbody tr:last-child td {
   }
 }
 
-.overview-page .sidebar {
-  flex-basis: 14.375rem;
-  padding: 1.875rem 1.125rem 1.25rem;
-}
-
-.overview-page .brand {
-  padding-inline: 0.625rem;
-}
-
-.overview-page .brand-name {
-  font-size: 1.15rem;
-}
-
-.overview-page .nav-label {
-  margin: 2.5rem 0.75rem 0.8rem;
-  font-size: 0.65rem;
-}
-
-.overview-page .nav-item {
-  padding: 0.7rem 0.75rem;
-  font-size: 0.85rem;
-}
-
-.overview-page .page-header {
-  min-height: 4.875rem;
-  padding-inline: 2.25rem;
-}
-
-.overview-page .header-actions {
-  gap: 1.25rem;
-  font-size: 0.8rem;
-}
-
-.overview-page .profile-summary {
-  gap: 0.5rem;
-}
-
-.overview-page .profile-initials {
-  width: 2.1rem;
-  height: 2.1rem;
-}
-
-.overview-page main {
-  max-width: 100rem;
-}
-
 .preparation-report-tools {
   display: flex;
   justify-content: flex-end;
