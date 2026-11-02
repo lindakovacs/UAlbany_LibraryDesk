@@ -704,6 +704,21 @@ main {
   font-size: 1.5rem;
 }
 
+.back-dashboard-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  color: #2b2034;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-dashboard-link:hover {
+  color: #46166b;
+}
+
 .equipment-target {
   margin-left: auto;
   text-align: right;
@@ -989,6 +1004,64 @@ main {
   font-size: 0.75rem;
 }
 
+.review-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  color: #46166b;
+  background: #f1ebf6;
+  border-radius: 0.4rem;
+}
+
+.review-status svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.review-status strong,
+.review-status small {
+  display: block;
+}
+
+.review-status strong {
+  font-size: 0.85rem;
+}
+
+.review-status small {
+  margin-top: 0.25rem;
+  color: #6b6474;
+  font-size: 0.75rem;
+}
+
+.review-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.review-items div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e4dfea;
+  border-radius: 0.4rem;
+  color: #2b2034;
+  font-size: 0.85rem;
+}
+
+.review-items strong {
+  color: #26734d;
+  font-size: 0.75rem;
+}
+
 .preparation-panel > table td:nth-child(2) .status-badge.ready {
   color: #26734d;
   background: #e8f5ed;
@@ -1030,10 +1103,14 @@ main {
   padding: 0.6rem 1rem;
   color: #ffffff;
   background: #46166b;
+  border: 0;
   border-radius: 0.4rem;
   font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
 }
 
 .primary-action svg {
