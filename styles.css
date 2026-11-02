@@ -1438,6 +1438,210 @@ main {
   color: #c43d43;
 }
 
+.equipment-introduction {
+  position: relative;
+  max-width: none;
+  min-height: 5rem;
+}
+
+.equipment-checkout-action {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.equipment-checkout-action span {
+  margin-right: 0.35rem;
+  font-size: 1.1rem;
+}
+
+.equipment-hero {
+  height: 12.5rem;
+  margin: 0 0 1.5rem;
+  background:
+    radial-gradient(circle at 22% 55%, rgb(255 255 255 / 28%) 0 7%, transparent 7.5%),
+    linear-gradient(110deg, #34383d 0%, #858b92 32%, #cbd0d5 52%, #565b61 72%, #22262b 100%);
+  border-radius: 0.4rem;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%);
+  overflow: hidden;
+}
+
+.equipment-collection-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.equipment-collection-heading h2 {
+  margin: 0;
+  color: #2b2034;
+  font-size: 1.05rem;
+}
+
+.equipment-collection-heading .equipment-search {
+  flex: 0 1 16rem;
+}
+
+.equipment-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.equipment-page .equipment-toolbar {
+  display: none;
+  width: 100%;
+}
+
+.equipment-toolbar .equipment-search {
+  display: none;
+}
+
+.equipment-search {
+  position: relative;
+  flex: 1;
+}
+
+.equipment-search label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.equipment-search span {
+  position: absolute;
+  top: 0.65rem;
+  left: 0.75rem;
+  color: #6b6474;
+}
+
+.equipment-search input,
+.equipment-toolbar select {
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  border: 1px solid #cfc5d6;
+  border-radius: 0.35rem;
+  background: #fff;
+  font: inherit;
+}
+
+.equipment-search input {
+  padding-left: 2rem;
+}
+
+.equipment-toolbar select {
+  width: 16rem;
+}
+
+.equipment-toolbar > span {
+  color: #6b6474;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.equipment-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "image image"
+    "content content"
+    "availability availability"
+    "action action";
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e4dfea;
+  border-radius: 0.5rem;
+}
+
+.equipment-card::before {
+  grid-area: image;
+  display: block;
+  height: 8rem;
+  margin: -1rem -1rem 0;
+  background: #f7f3fa;
+  border-radius: 0.5rem 0.5rem 0 0;
+  content: "";
+}
+
+.catalog-icon {
+  grid-area: image;
+  justify-self: center;
+  align-self: center;
+  z-index: 1;
+  display: inline-grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  color: #46166b;
+  background: #f1ebf6;
+  border-radius: 0.4rem;
+}
+
+.catalog-icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.equipment-card h2 {
+  margin: 0;
+  color: #2b2034;
+  font-size: 0.9rem;
+}
+
+.equipment-card > div:nth-child(2) {
+  grid-area: content;
+}
+
+.equipment-card p {
+  margin: 0.3rem 0 0;
+  color: #6b6474;
+  font-size: 0.72rem;
+}
+
+.equipment-availability {
+  grid-area: availability;
+  padding-top: 0.75rem;
+  border-top: 1px solid #eeeaf1;
+}
+
+.equipment-availability strong,
+.equipment-availability span {
+  display: block;
+}
+
+.equipment-availability strong {
+  color: #26734d;
+  font-size: 0.8rem;
+}
+
+.equipment-availability span {
+  margin-top: 0.2rem;
+  color: #6b6474;
+  font-size: 0.72rem;
+}
+
+.equipment-card .secondary-action {
+  grid-area: action;
+  justify-content: center;
+}
+
 .loan-status.overdue {
   color: #a4262c;
   background: #fde8e8;
@@ -1722,10 +1926,7 @@ tbody tr:last-child td {
 
 .login-main {
   display: grid;
-  min-width: 0;
-  place-items: center;
-  padding: clamp(3rem, 8vh, 6rem) clamp(2rem, 4vw, 4rem);
-  background: #f1ebf6;
+  grid-column: 1 / -1;
 }
 
 .login-card {
@@ -1875,6 +2076,10 @@ tbody tr:last-child td {
     margin-left: 0;
   }
 
+  .equipment-hero {
+    height: 9rem;
+  }
+
   .loans-introduction .new-checkout-action {
     position: static;
     margin-top: 1rem;
@@ -1924,4 +2129,14 @@ tbody tr:last-child td {
   main {
     padding: 2rem 0;
   }
+
+  .equipment-collection-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .equipment-collection-heading .equipment-search {
+    flex-basis: auto;
+  }
+
 }
