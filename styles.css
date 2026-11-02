@@ -934,6 +934,61 @@ main {
   margin: 0;
 }
 
+.checklist-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0 1rem;
+}
+
+.checklist-heading h3 {
+  margin: 0;
+  color: #2b2034;
+  font-size: 1rem;
+}
+
+.checklist-heading span {
+  color: #6b6474;
+  font-size: 0.8rem;
+}
+
+.checklist-items {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.checklist-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e4dfea;
+  border-radius: 0.4rem;
+}
+
+.checklist-row input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: #46166b;
+}
+
+.checklist-row span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.checklist-row strong {
+  color: #2b2034;
+  font-size: 0.85rem;
+}
+
+.checklist-row small {
+  color: #6b6474;
+  font-size: 0.75rem;
+}
+
 .preparation-panel > table td:nth-child(2) .status-badge.ready {
   color: #26734d;
   background: #e8f5ed;
