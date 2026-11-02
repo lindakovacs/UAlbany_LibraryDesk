@@ -3,159 +3,74 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Library equipment checkout and preparation workspace."
-    >
+    <meta name="description" content="LibraryDesk staff overview for equipment borrowing and preparation.">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <title>LibraryDesk | Overview</title>
   </head>
-  <body>
+  <body class="overview-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
-
     <div class="app-shell">
       <aside class="sidebar" aria-label="Primary">
-        <div class="brand">
-          <a href="/" aria-label="LibraryDesk home">
-            <span class="brand-symbol" aria-hidden="true">
-              <img src="assets/favicon.svg" alt="">
-            </span>
-            <span class="brand-copy">
-              <span class="brand-name">LibraryDesk</span>
-              <small>UAlbany University Libraries</small>
-            </span>
-          </a>
-        </div>
-
-        <nav aria-label="Workspace navigation">
-          <p class="nav-label">Workspace</p>
-          <ul>
-            <li>
-              <a class="nav-item" href="preparation-progress.html">Preparation</a>
-            </li>
-            <li>
-              <a class="nav-item" href="/" aria-current="page">Overview</a>
-            </li>
-            <li>
-              <a class="nav-item" href="/equipment.html">Equipment</a>
-            </li>
-            <li>
-              <a class="nav-item" href="/loans.html">Loans &amp; returns</a>
-            </li>
-            <li>
-              <a class="nav-item" href="/borrowers.html">Borrowers</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="sidebar-footer">
-          <img
-            class="ualbany-logo"
-            src="assets/UAlbany_logo.svg"
-            alt="University at Albany"
-          >
-          <a class="nav-item" href="/help.html">Help &amp; support</a>
-          <address>
-            <strong>University Library</strong>
-            <br>
-            Uptown Campus · Albany, NY
-          </address>
-        </div>
+        <div class="brand"><a href="index.html" aria-label="LibraryDesk home"><span class="brand-symbol" aria-hidden="true"><img src="assets/favicon.svg" alt=""></span><span class="brand-copy"><span class="brand-name">LibraryDesk</span><small>UAlbany University Libraries</small></span></a></div>
+        <nav aria-label="Workspace navigation"><p class="nav-label">Workspace</p><ul><li><a class="nav-item" href="preparation-progress.html">Preparation</a></li><li><a class="nav-item" href="index.html" aria-current="page">Overview</a></li><li><a class="nav-item" href="equipment.html">Equipment</a></li><li><a class="nav-item" href="loans.html">Loans &amp; returns</a></li><li><a class="nav-item" href="borrowers.html">Borrowers</a></li></ul></nav>
+        <div class="sidebar-footer"><a class="nav-item" href="help.html">? &nbsp; Help &amp; support</a><address><strong>University Library</strong><br>Uptown Campus · Albany, NY</address></div>
       </aside>
-
       <div class="page-container">
-        <header class="page-header">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <span>Staff workspace</span>
-            <span aria-hidden="true">›</span>
-            <strong>Overview</strong>
-          </nav>
-
-          <div class="header-actions">
-            <span class="library-status">
-              <span class="status-dot" aria-hidden="true"></span>
-              Library open
-            </span>
-            <a class="notification-link" href="/notifications.html" aria-label="Notifications">
-              <span aria-hidden="true">&#128276;</span>
-            </a>
-            <a href="login.html">Sign out</a>
-            <span class="profile-divider" aria-hidden="true"></span>
-            <a class="profile-summary" href="/profile.html">
-              <span class="profile-initials" aria-hidden="true">LK</span>
-              <span>
-                <strong>Linda Kovacs</strong>
-                <small>Library staff</small>
-              </span>
-              <span aria-hidden="true">⌄</span>
-            </a>
-          </div>
-        </header>
-
+        <header class="page-header"><nav class="breadcrumbs" aria-label="Breadcrumb"><span>Staff workspace</span><span aria-hidden="true">›</span><strong>Overview</strong></nav><div class="header-actions"><span class="library-status"><span class="status-dot" aria-hidden="true"></span>Library open</span><a class="notification-link" href="notifications.html" aria-label="Notifications">&#128276;</a><a href="login.html">Sign out</a><span class="profile-divider" aria-hidden="true"></span><a class="profile-summary" href="profile.html"><span class="profile-initials" aria-hidden="true">LK</span><span><strong>Linda Kovacs</strong><small>Library staff</small></span><span aria-hidden="true">⌄</span></a></div></header>
         <main id="main-content">
-          <section class="page-introduction" aria-labelledby="welcome-heading">
-            <p class="eyebrow">Library equipment workspace</p>
-            <h2 id="welcome-heading">A little organization. A lot of possibilities.</h2>
-            <p>Manage equipment borrowing, returns, and daily staff activity.</p>
+          <section class="overview-heading" aria-labelledby="overview-title"><div><h1 id="overview-title">Good afternoon, Linda<span class="text-primary">.</span></h1><p>A little organization. A lot of possibilities. Here’s your library at a glance.</p></div><time datetime="2026-10-11">Sunday, October 11, 2026</time></section>
+
+          <section class="overview-stats" aria-label="Library statistics">
+            <article><div><span>Total equipment</span><strong>35</strong><small>Across 6 equipment categories</small></div><b aria-hidden="true">✓</b></article>
+            <article><div><span>Currently on loan</span><strong>05</strong><small>Equipment out with borrowers</small></div><b aria-hidden="true">↔</b></article>
+            <article class="warning"><div><span>Due today</span><strong>02</strong><small>Expected back before closing</small></div><b aria-hidden="true">◷</b></article>
+            <article class="danger"><div><span>Overdue</span><strong>01</strong><small>A little follow-up needed</small></div><b aria-hidden="true">!</b></article>
           </section>
 
-          <section class="dashboard-section" aria-labelledby="activity-heading">
-            <div class="section-heading">
-              <h2 id="activity-heading">Today at a glance</h2>
-              <a href="/reports.html">View reports</a>
-            </div>
-
-            <dl class="summary-list">
-              <div class="summary-card">
-                <dt>Equipment available</dt>
-                <dd>—</dd>
-              </div>
-              <div class="summary-card">
-                <dt>Active loans</dt>
-                <dd>—</dd>
-              </div>
-              <div class="summary-card">
-                <dt>Due today</dt>
-                <dd>—</dd>
-              </div>
-              <div class="summary-card">
-                <dt>Needs preparation</dt>
-                <dd>—</dd>
-              </div>
-            </dl>
+          <section class="overview-actions" aria-label="Quick actions">
+            <article><span aria-hidden="true">↗</span><div><h2>Ready for their next project</h2><p>Check out equipment to a borrower.</p></div><a class="overview-button" href="new-loan.html">＋ New checkout</a></article>
+            <article><span aria-hidden="true">↙</span><div><h2>Back on the shelf</h2><p>Check in equipment and close a loan.</p></div><a class="overview-button secondary" href="return-item.html">↙ Return item</a></article>
           </section>
 
-          <section class="dashboard-section" aria-labelledby="loans-heading">
-            <div class="section-heading">
-              <h2 id="loans-heading">Recent loans</h2>
-              <a href="/loans.html">View all loans</a>
-            </div>
-
-            <div class="table-container">
-              <table>
-                <caption>Recent equipment loans</caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Equipment</th>
-                    <th scope="col">Borrower</th>
-                    <th scope="col">Due date</th>
-                    <th scope="col">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td colspan="4">No loan activity to display.</td>
-                  </tr>
-                </tbody>
-              </table>
+          <section class="overview-section" aria-labelledby="preparation-report-heading">
+            <div class="overview-section-heading"><div><h2 id="preparation-report-heading">Preparation reporting</h2><p>Equipment moving through readiness checks before it reaches the shelf.</p></div><a href="preparation-progress.html">Open preparation ↗</a></div>
+            <div class="preparation-report">
+              <div class="preparation-report-stats"><div><strong>04</strong><span>Needs preparation</span></div><div><strong>03</strong><span>In preparation</span></div><div><strong>02</strong><span>Awaiting review</span></div><div><strong>02</strong><span>Ready for lending</span></div></div>
+              <div class="preparation-report-header"><span>Equipment</span><span>Assigned to</span><span>Target date</span><span>Status</span></div>
+              <div class="preparation-report-tools"><label for="preparation-search">Search preparation</label><input id="preparation-search" type="search" placeholder="Search equipment, staff, or status..."></div>
+              <div class="preparation-report-row"><div><strong>Game Console</strong><small>EQ-014 · 0 of 4 steps complete</small></div><span>Unassigned</span><time datetime="2026-10-15">Oct 15, 2026</time><em class="status-badge">Needs preparation</em></div>
+              <div class="preparation-report-row"><div><strong>Mirrorless Camera Kit</strong><small>EQ-001 · 0 of 4 steps complete</small></div><span>Unassigned</span><time datetime="2026-10-15">Oct 15, 2026</time><em class="status-badge">Needs preparation</em></div>
+              <div class="preparation-report-row"><div><strong>PlayStation 5</strong><small>EQ-006 · 2 of 4 steps complete</small></div><span>John D</span><time datetime="2026-10-15">Oct 15, 2026</time><em class="status-badge in-progress">In preparation</em></div>
+              <div class="preparation-report-row"><div><strong>Owl 3 Video Conference Camera</strong><small>EQ-010 · 1 of 4 steps complete</small></div><span>Maria Santos</span><time datetime="2026-10-16">Oct 16, 2026</time><em class="status-badge in-progress">In preparation</em></div>
+              <div class="preparation-report-row"><div><strong>Portable Podcasting Kit (Zoom H6)</strong><small>EQ-011 · 4 of 4 steps complete</small></div><span>Alex Chen</span><time datetime="2026-10-15">Oct 15, 2026</time><em class="status-badge in-review">Awaiting review</em></div>
+              <div class="preparation-report-row"><div><strong>Rode Wireless GO II Microphone System</strong><small>EQ-005 · 4 of 4 steps complete</small></div><span>Maria Santos</span><time datetime="2026-10-16">Oct 16, 2026</time><em class="status-badge in-review">Awaiting review</em></div>
+              <div class="preparation-report-row"><div><strong>3D Scanning Kit (Revopoint POP 3 Plus)</strong><small>EQ-004 · 4 of 4 steps complete</small></div><span>Linda Kovacs</span><time datetime="2026-10-14">Oct 14, 2026</time><em class="status-badge ready">Ready for lending</em></div>
+              <div class="preparation-report-row"><div><strong>M30 Gamepad</strong><small>EQ-009 · 4 of 4 steps complete</small></div><span>John D</span><time datetime="2026-10-13">Oct 13, 2026</time><em class="status-badge ready">Ready for lending</em></div>
+              <div class="preparation-report-footer"><span>Showing 8 of 11 items</span><a href="preparation-progress.html">View all preparation</a></div>
             </div>
           </section>
+
+          <section class="overview-section" aria-labelledby="checkout-report-heading">
+            <div class="overview-section-heading"><div><h2 id="checkout-report-heading">Post-checkout report</h2><p>Anonymous checkout history for each item. No borrower details are included.</p></div></div>
+            <div class="checkout-report">
+              <div class="checkout-report-controls"><label>Timeframe<select><option>Fall 2026 (current)</option></select></label><label>From<input type="date" value="2026-08-24"></label><label>To<input type="date" value="2026-12-18"></label><button type="button">▷ Run report</button></div>
+              <div class="checkout-report-summary"><strong>Fall 2026 (current)</strong> · 24 Aug 2026 – 18 Dec 2026 <span>65 checkouts · 3.5 days avg</span></div>
+              <table><caption>Post-checkout report</caption><thead><tr><th>Equipment</th><th>Checkouts</th><th>Avg. length</th><th>Total days out</th></tr></thead><tbody>
+                <tr><td>Mirrorless Camera Kit <small>EQ-001</small></td><td>6</td><td>3.8 days</td><td>23 days</td></tr><tr><td>3D Scanning Kit (Revopoint POP 3 Plus) <small>EQ-004</small></td><td>6</td><td>3 days</td><td>18 days</td></tr><tr><td>Owl 3 Video Conference Camera <small>EQ-010</small></td><td>6</td><td>2.8 days</td><td>17 days</td></tr><tr><td>Nintendo Switch <small>EQ-002</small></td><td>5</td><td>3 days</td><td>15 days</td></tr><tr><td>Rode Wireless GO II Microphone System <small>EQ-005</small></td><td>5</td><td>3.2 days</td><td>16 days</td></tr><tr><td>PlayStation 5 <small>EQ-006</small></td><td>5</td><td>3.8 days</td><td>19 days</td></tr><tr><td>M30 Gamepad <small>EQ-009</small></td><td>5</td><td>4 days</td><td>20 days</td></tr><tr><td>Portable Podcasting Kit (Zoom H6) <small>EQ-011</small></td><td>5</td><td>4 days</td><td>20 days</td></tr></tbody></table>
+            </div>
+          </section>
+
+          <section class="overview-section" aria-labelledby="recent-loans-heading">
+            <div class="overview-section-heading"><div><h2 id="recent-loans-heading">Recent loans</h2><p>A live look at what’s out and what’s coming back.</p></div><a href="loans.html">View all loans ↗</a></div>
+            <div class="table-container overview-loans"><div class="loan-toolbar"><span>All loans <b>5</b> &nbsp; Due today <b>2</b> &nbsp; Overdue <b>1</b></span><input type="search" placeholder="Search loans..."></div><table><caption>Recent equipment loans</caption><thead><tr><th scope="col">Equipment</th><th scope="col">Borrower</th><th scope="col">Checked out</th><th scope="col">Due date</th><th scope="col">Status</th></tr></thead><tbody>
+              <tr><td><strong>Mirrorless Camera Kit</strong><small>EQ-001 · Creative Technology</small></td><td><strong>Emma Wilson</strong><small>001482759</small></td><td>Oct 9, 2026</td><td>Oct 13, 2026</td><td><em class="loan-pill">On loan</em></td></tr><tr><td><strong>Nintendo Switch</strong><small>EQ-002 · Gaming Consoles</small></td><td><strong>James Chen</strong><small>001573024</small></td><td>Oct 7, 2026</td><td>Oct 11, 2026</td><td><em class="loan-pill due">Due today</em></td></tr><tr><td><strong>H4 Zoom Audio Recording Kit</strong><small>EQ-003 · Creative Technology</small></td><td><strong>Olivia Martinez</strong><small>001492831</small></td><td>Oct 5, 2026</td><td class="overdue-text">Oct 9, 2026</td><td><em class="loan-pill overdue">Overdue</em></td></tr><tr><td><strong>3D Scanning Kit (Revopoint POP 3 Plus)</strong><small>EQ-004 · Creative Technology</small></td><td><strong>Noah Thompson</strong><small>001583902</small></td><td>Oct 8, 2026</td><td>Oct 12, 2026</td><td><em class="loan-pill">On loan</em></td></tr><tr><td><strong>Rode Wireless GO II Microphone System</strong><small>EQ-005 · Creative Technology</small></td><td><strong>Sophia Lee</strong><small>001482610</small></td><td>Oct 7, 2026</td><td>Oct 11, 2026</td><td><em class="loan-pill due">Due today</em></td></tr>
+            </tbody></table><div class="overview-table-footer"><span>Showing 5 of 5 loans</span><span>All records up to date</span></div></div>
+          </section>
+
+          <div class="overview-bottom-grid"><section class="overview-section" aria-labelledby="equipment-glance-heading"><div class="overview-section-heading"><h2 id="equipment-glance-heading">Equipment at a glance</h2><a href="equipment.html">Browse equipment ↗</a></div><div class="inventory-glance"><article><strong>Creative Technology</strong><span>3 available / 4</span><small>Camera</small></article><article><strong>Gaming Consoles and Accessories</strong><span>3 available / 4</span><small>Console</small></article><article><strong>Creative Technology</strong><span>2 available / 3</span><small>Microphone</small></article><article><strong>Creative Technology</strong><span>1 available / 2</span><small>Computer</small></article></div></section><section class="overview-section recent-activity" aria-labelledby="recent-activity-heading"><div class="overview-section-heading"><h2 id="recent-activity-heading">Recent activity</h2><span>Today</span></div><ul><li><b>↗</b><div><strong>Emma Wilson checked out equipment</strong><small>Mirrorless Camera Kit · Just now</small></div></li><li><b>↗</b><div><strong>James Chen checked out equipment</strong><small>Nintendo Switch · 18 min ago</small></div></li><li><b>↗</b><div><strong>Olivia Martinez checked out equipment</strong><small>H4 Zoom Audio Recording Kit · 36 min ago</small></div></li></ul></section></div>
         </main>
-        <footer class="page-footer">
-          <p class="footer-brand">LibraryDesk · UAlbany University Libraries</p>
-          <p class="copyright">&copy; 2026 UAlbany Library | Team KofN1: Linda Kovacs, Veronica Dindial, Rym Mahiddine, Wendy Ouedraogo, Amari Scott</p>
-        </footer>
+        <footer class="page-footer"><p class="footer-brand">LibraryDesk · UAlbany University Libraries</p><p class="copyright">Made for the people behind the desk.</p></footer>
       </div>
     </div>
   </body>
