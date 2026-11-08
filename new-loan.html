@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Check out University Library equipment to an authorized borrower."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="components.js"></script>
+    <title>LibraryDesk | New Checkout</title>
+  </head>
+  <body class="loans-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell">
+      <app-sidebar current="loans"></app-sidebar>
+      <div class="page-container">
+        <app-header
+          breadcrumbs='[{"label":"Loans & returns","href":"loans.html"},{"label":"New checkout"}]'
+        ></app-header>
+        <main id="main-content">
+          <section
+            class="page-introduction"
+            aria-labelledby="new-loan-heading"
+          >
+            <p class="eyebrow">Library equipment workspace</p>
+            <h1 id="new-loan-heading">New equipment checkout</h1>
+            <p>
+              Check out equipment from the University Library collection to an
+              authorized student, faculty, or staff borrower.
+            </p>
+          </section>
+
+          <section
+            class="equipment-detail-panel"
+            aria-labelledby="form-heading"
+          >
+            <div class="equipment-detail-heading">
+              <span class="equipment-detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </span>
+              <div>
+                <p class="equipment-id">Circulation Desk · Equipment Checkout</p>
+                <h2 id="form-heading">Equipment Checkout Form</h2>
+                <span class="status-badge ready">Ready to borrow</span>
+              </div>
+              <div class="equipment-target">
+                <span>Today</span>
+                <strong>11 Oct 2026</strong>
+              </div>
+            </div>
+
+            <form class="assignment-form" action="loans.html" method="get">
+              <h3>1. Borrower Information</h3>
+              <div class="assignment-fields">
+                <div>
+                  <label for="borrower-name">Borrower full name</label>
+                  <input
+                    id="borrower-name"
+                    name="borrower"
+                    type="text"
+                    placeholder="e.g. Emma Wilson"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="borrower-netid">Borrower NetID</label>
+                  <input
+                    id="borrower-netid"
+                    name="netid"
+                    type="text"
+                    placeholder="e.g. emma.wilson"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="assignment-fields" style="margin-top: 1rem">
+                <div>
+                  <label for="student-id">University ID (9-digit)</label>
+                  <input
+                    id="student-id"
+                    name="studentId"
+                    type="text"
+                    placeholder="e.g. 001482759"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="borrower-email">UAlbany email address</label>
+                  <input
+                    id="borrower-email"
+                    name="email"
+                    type="email"
+                    placeholder="e.g. emma.wilson@ualbany.edu"
+                  />
+                </div>
+              </div>
+
+              <div class="assignment-fields" style="margin-top: 1rem">
+                <div style="grid-column: 1 / -1">
+                  <label for="borrower-role">Borrower affiliation</label>
+                  <select id="borrower-role" name="role" required>
+                    <option value="undergraduate">Undergraduate Student</option>
+                    <option value="graduate">Graduate Student</option>
+                    <option value="faculty">Faculty Member</option>
+                    <option value="staff">Library / University Staff</option>
+                  </select>
+                </div>
+              </div>
+
+              <h3>2. Equipment Details</h3>
+              <div class="assignment-fields">
+                <div>
+                  <label for="equipment-select">Select equipment</label>
+                  <select id="equipment-select" name="equipment" required>
+                    <option value="">Choose equipment to check out...</option>
+                    <option value="EQ-001">EQ-001 · Mirrorless Camera Kit (3 available)</option>
+                    <option value="EQ-002">EQ-002 · Nintendo Switch (3 available)</option>
+                    <option value="EQ-003">EQ-003 · H4 Zoom Audio Recording Kit (2 available)</option>
+                    <option value="EQ-004">EQ-004 · 3D Scanning Kit (Revopoint POP 3 Plus) (1 available)</option>
+                    <option value="EQ-005">EQ-005 · Rode Wireless GO II Microphone System (2 available)</option>
+                    <option value="EQ-006">EQ-006 · PlayStation 5 (2 available)</option>
+                    <option value="EQ-007">EQ-007 · Arcade Controller (2 available)</option>
+                    <option value="EQ-008">EQ-008 · H1 Zoom Kit (2 available)</option>
+                    <option value="EQ-009">EQ-009 · M30 Gamepad (3 available)</option>
+                    <option value="EQ-010">EQ-010 · Owl 3 Video Conference Camera (2 available)</option>
+                    <option value="EQ-011">EQ-011 · Portable Podcasting Kit (Zoom H6) (2 available)</option>
+                    <option value="EQ-012">EQ-012 · SmallRig All-in-One Smartphone Video Kit (2 available)</option>
+                    <option value="EQ-013">EQ-013 · SN30 Pro Gamepad (3 available)</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="asset-tag">Barcode / Asset tag</label>
+                  <input
+                    id="asset-tag"
+                    name="assetTag"
+                    type="text"
+                    placeholder="e.g. ALB-EQ-001-B"
+                  />
+                </div>
+              </div>
+
+              <h3>3. Loan Duration &amp; Due Date</h3>
+              <div class="assignment-fields">
+                <div>
+                  <label for="checkout-date">Checkout date</label>
+                  <input
+                    id="checkout-date"
+                    name="checkedOut"
+                    type="date"
+                    value="2026-10-11"
+                    readonly
+                  />
+                </div>
+                <div>
+                  <label for="due-date">Return due date</label>
+                  <input
+                    id="due-date"
+                    name="due"
+                    type="date"
+                    value="2026-10-15"
+                    required
+                  />
+                </div>
+              </div>
+
+              <h3>4. Verification &amp; Included Accessories</h3>
+              <div class="task-options">
+                <label>
+                  <input type="checkbox" name="verified-power" checked />
+                  Power cable &amp; AC adapter verified
+                </label>
+                <label>
+                  <input type="checkbox" name="verified-case" checked />
+                  Protective carrying case included
+                </label>
+                <label>
+                  <input type="checkbox" name="verified-accessories" checked />
+                  All accessories &amp; memory cards checked
+                </label>
+                <label>
+                  <input type="checkbox" name="policy-agreed" required checked />
+                  Borrower signed equipment liability agreement
+                </label>
+              </div>
+
+              <div>
+                <label for="checkout-notes">Special instructions or notes</label>
+                <textarea
+                  id="checkout-notes"
+                  name="notes"
+                  rows="3"
+                  placeholder="Optional notes regarding accessories, condition, or special project use..."
+                ></textarea>
+              </div>
+
+              <div class="detail-actions" style="margin-top: 1.5rem; display: flex; gap: 0.75rem; align-items: center">
+                <button class="primary-action" type="submit">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Complete checkout
+                </button>
+                <a class="secondary-action" href="loans.html">Cancel</a>
+              </div>
+            </form>
+          </section>
+        </main>
+        <app-footer></app-footer>
+      </div>
+    </div>
+    <script>
+      (function() {
+        const params = new URLSearchParams(window.location.search);
+        const eqParam = params.get('equipment') || params.get('item');
+        if (eqParam) {
+          const select = document.getElementById('equipment-select');
+          if (select) {
+            for (let i = 0; i < select.options.length; i++) {
+              if (select.options[i].value === eqParam || select.options[i].text.includes(eqParam)) {
+                select.selectedIndex = i;
+                break;
+              }
+            }
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Staff support contacts, equipment borrowing policies, and circulation desk procedures."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="components.js"></script>
+    <title>LibraryDesk | Help &amp; Support</title>
+  </head>
+  <body class="overview-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell">
+      <app-sidebar current="overview"></app-sidebar>
+      <div class="page-container">
+        <app-header breadcrumbs="Help &amp; support"></app-header>
+        <main id="main-content">
+          <section
+            class="page-introduction"
+            aria-labelledby="help-heading"
+          >
+            <p class="eyebrow">University Library · Staff reference guide</p>
+            <h1 id="help-heading">Help &amp; staff support</h1>
+            <p>
+              Circulation desk procedures, equipment loan policies, escalation
+              contacts, and technical assistance.
+            </p>
+          </section>
+
+          <!-- Quick Contacts Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.5rem">
+            <article class="dashboard-section" style="padding: 1.25rem; background: #fff; border: 1px solid #e8e1ed; border-radius: 0.6rem">
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem">
+                <span style="display: grid; width: 2.25rem; height: 2.25rem; place-items: center; background: #f1ebf6; color: #46166b; border-radius: 0.5rem; font-weight: bold">
+                  &#128222;
+                </span>
+                <div>
+                  <h2 style="margin: 0; font-size: 1rem; color: #252525">Circulation Desk</h2>
+                  <small style="color: #6b6474">Uptown Campus · 1st Floor</small>
+                </div>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.85rem; color: #5f6872">
+                Primary point of contact for student checkouts, hold pickups, and loan renewals.
+              </p>
+              <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.8rem; color: #6b6474; line-height: 1.6">
+                <li><strong>Phone:</strong> (518) 442-3569</li>
+                <li><strong>Hours:</strong> Mon–Thu 8 AM – 10 PM</li>
+                <li><strong>Weekend:</strong> Sat–Sun 12 PM – 8 PM</li>
+              </ul>
+            </article>
+
+            <article class="dashboard-section" style="padding: 1.25rem; background: #fff; border: 1px solid #e8e1ed; border-radius: 0.6rem">
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem">
+                <span style="display: grid; width: 2.25rem; height: 2.25rem; place-items: center; background: #f1ebf6; color: #46166b; border-radius: 0.5rem; font-weight: bold">
+                  &#128187;
+                </span>
+                <div>
+                  <h2 style="margin: 0; font-size: 1rem; color: #252525">Library Technology Team</h2>
+                  <small style="color: #6b6474">Hardware &amp; Software Support</small>
+                </div>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.85rem; color: #5f6872">
+                Responsible for device provisioning, camera sensor cleaning, OS image resets, and repair holds.
+              </p>
+              <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.8rem; color: #6b6474; line-height: 1.6">
+                <li><strong>Email:</strong> lib.tech@ualbany.edu</li>
+                <li><strong>Office:</strong> LI-B12 (Basement Level)</li>
+                <li><strong>Hours:</strong> Mon–Fri 9 AM – 5 PM</li>
+              </ul>
+            </article>
+
+            <article class="dashboard-section" style="padding: 1.25rem; background: #fff; border: 1px solid #e8e1ed; border-radius: 0.6rem">
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem">
+                <span style="display: grid; width: 2.25rem; height: 2.25rem; place-items: center; background: #f1ebf6; color: #46166b; border-radius: 0.5rem; font-weight: bold">
+                  &#9878;
+                </span>
+                <div>
+                  <h2 style="margin: 0; font-size: 1rem; color: #252525">Desk Supervisor on Duty</h2>
+                  <small style="color: #6b6474">Policy Overrides &amp; Incidents</small>
+                </div>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.85rem; color: #5f6872">
+                Escalate damaged returns, missing equipment investigations, and borrower account suspension disputes.
+              </p>
+              <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.8rem; color: #6b6474; line-height: 1.6">
+                <li><strong>Staff radio / extension:</strong> x2-3690</li>
+                <li><strong>Supervisor desk:</strong> Circulation Room 104</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Standard Operating Procedures -->
+          <section class="dashboard-section" style="padding: 1.5rem; background: #fff; border: 1px solid #e8e1ed; border-radius: 0.6rem; margin-bottom: 1.5rem">
+            <h2 style="margin: 0 0 1rem; font-size: 1.15rem; color: #252525">Staff Operating Guidelines</h2>
+
+            <div style="display: grid; gap: 1.25rem">
+              <div>
+                <h3 style="margin: 0 0 0.35rem; font-size: 0.95rem; color: #46166b">1. Checkout Verification Workflow</h3>
+                <p style="margin: 0; font-size: 0.85rem; color: #5f6872; line-height: 1.6">
+                  Always confirm borrower identity using their physical UAlbany ID card or active NetID lookup. Verify all included accessories against the equipment kit list before completing checkout in <a href="new-loan.html" style="color: #46166b; font-weight: bold">New checkout</a>.
+                </p>
+              </div>
+
+              <div>
+                <h3 style="margin: 0 0 0.35rem; font-size: 0.95rem; color: #46166b">2. Equipment Check-in &amp; Quarantine</h3>
+                <p style="margin: 0; font-size: 0.85rem; color: #5f6872; line-height: 1.6">
+                  Returned equipment must not be shelved immediately. Process the return via <a href="return-item.html" style="color: #46166b; font-weight: bold">Return equipment</a>, route the device to the preparation queue, and perform data wipe and sanitization steps before marking it ready for lending.
+                </p>
+              </div>
+
+              <div>
+                <h3 style="margin: 0 0 0.35rem; font-size: 0.95rem; color: #46166b">3. Damaged or Incomplete Returns</h3>
+                <p style="margin: 0; font-size: 0.85rem; color: #5f6872; line-height: 1.6">
+                  If an item is returned damaged or missing components, select "Damaged — supervisor inspection required" in the return form, record detailed notes, and place the kit in the quarantine hold locker.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- External Links -->
+          <section class="dashboard-section" style="padding: 1.25rem 1.5rem; background: #faf8fc; border: 1px solid #e8e1ed; border-radius: 0.6rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem">
+            <div>
+              <strong style="color: #252525; font-size: 0.9rem">Need more institutional information?</strong>
+              <p style="margin: 0.2rem 0 0; color: #6b6474; font-size: 0.8rem">Visit the University at Albany Libraries main website for academic calendar, library catalog, and research databases.</p>
+            </div>
+            <a class="secondary-action" href="https://library.albany.edu" target="_blank" rel="noreferrer">
+              University Libraries Portal &#8599;
+            </a>
+          </section>
+        </main>
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </body>
+</html>

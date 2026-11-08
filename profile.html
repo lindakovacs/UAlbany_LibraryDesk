@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Staff profile, NetID credentials, and circulation station permissions."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="components.js"></script>
+    <title>LibraryDesk | Staff Profile</title>
+  </head>
+  <body class="overview-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell">
+      <app-sidebar current="overview"></app-sidebar>
+      <div class="page-container">
+        <app-header breadcrumbs="Staff profile"></app-header>
+        <main id="main-content">
+          <section
+            class="page-introduction"
+            aria-labelledby="profile-heading"
+          >
+            <p class="eyebrow">Authorized personnel</p>
+            <h1 id="profile-heading">Staff profile</h1>
+            <p>
+              Your UAlbany credentials, active permissions, station assignment,
+              and circulation desk session.
+            </p>
+          </section>
+
+          <section
+            class="equipment-detail-panel"
+            aria-labelledby="user-name-heading"
+          >
+            <div class="equipment-detail-heading">
+              <span
+                class="equipment-detail-icon"
+                style="background: #46166b; color: #ffffff; font-weight: bold; font-size: 1.15rem; display: grid; place-items: center"
+                aria-hidden="true"
+              >
+                LK
+              </span>
+              <div>
+                <p class="equipment-id">UAlbany NetID: linda.kovacs</p>
+                <h2 id="user-name-heading">Linda Kovacs</h2>
+                <span class="status-badge ready">Active staff session</span>
+              </div>
+              <div class="equipment-target">
+                <span>Current Shift</span>
+                <strong>11 Oct 2026</strong>
+              </div>
+            </div>
+
+            <div class="detail-columns">
+              <section aria-labelledby="staff-id-heading">
+                <h3 id="staff-id-heading">Staff Credentials</h3>
+                <dl class="detail-list">
+                  <div>
+                    <dt>Full name</dt>
+                    <dd>Linda Kovacs</dd>
+                  </div>
+                  <div>
+                    <dt>NetID</dt>
+                    <dd>linda.kovacs</dd>
+                  </div>
+                  <div>
+                    <dt>University ID</dt>
+                    <dd>001239847</dd>
+                  </div>
+                  <div>
+                    <dt>Department</dt>
+                    <dd>University Libraries</dd>
+                  </div>
+                  <div>
+                    <dt>Division</dt>
+                    <dd>Access &amp; Circulation Services</dd>
+                  </div>
+                  <div>
+                    <dt>Official email</dt>
+                    <dd>linda.kovacs@ualbany.edu</dd>
+                  </div>
+                </dl>
+              </section>
+
+              <section aria-labelledby="station-heading">
+                <h3 id="station-heading">Station &amp; System Permissions</h3>
+                <dl class="detail-list">
+                  <div>
+                    <dt>Desk station</dt>
+                    <dd>Uptown Circulation Desk #2</dd>
+                  </div>
+                  <div>
+                    <dt>Role</dt>
+                    <dd>Authorized Circulation Specialist</dd>
+                  </div>
+                  <div>
+                    <dt>System permissions</dt>
+                    <dd>Checkout, Return, Review, Reports</dd>
+                  </div>
+                  <div>
+                    <dt>Authentication</dt>
+                    <dd>UAlbany NetID SSO (Active)</dd>
+                  </div>
+                  <div>
+                    <dt>Signed in at</dt>
+                    <dd>Today, 8:15 AM</dd>
+                  </div>
+                  <div>
+                    <dt>Workstation ID</dt>
+                    <dd>DESK-CIRC-02 (Uptown)</dd>
+                  </div>
+                </dl>
+              </section>
+            </div>
+
+            <div class="detail-actions" style="margin-top: 2rem; display: flex; gap: 0.75rem; align-items: center">
+              <a class="primary-action" href="index.html">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                Return to dashboard
+              </a>
+              <a class="secondary-action" href="login.html">
+                Sign out
+              </a>
+            </div>
+          </section>
+        </main>
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </body>
+</html>

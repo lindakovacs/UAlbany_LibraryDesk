@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Anonymous equipment checkout reports and historical usage analytics."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="components.js"></script>
+    <title>LibraryDesk | Reports</title>
+  </head>
+  <body class="overview-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell">
+      <app-sidebar current="reports"></app-sidebar>
+      <div class="page-container">
+        <app-header breadcrumbs="Reports"></app-header>
+        <main id="main-content">
+          <section
+            class="page-introduction"
+            aria-labelledby="reports-heading"
+          >
+            <p class="eyebrow">University Library · Administrative reporting</p>
+            <h1 id="reports-heading">Post-checkout reports</h1>
+            <p>
+              Anonymous checkout history and utilization statistics for each
+              equipment collection item. No borrower details are included.
+            </p>
+          </section>
+
+          <section class="checkout-report" aria-labelledby="report-panel-heading">
+            <h2 id="report-panel-heading" class="visually-hidden">Equipment report filter</h2>
+            <form class="checkout-report-controls" id="report-form" onsubmit="return false;">
+              <label for="report-semester">
+                Timeframe
+                <select id="report-semester">
+                  <option value="fall-2026" selected>Fall 2026 (current)</option>
+                  <option value="summer-2026">Summer 2026</option>
+                  <option value="spring-2026">Spring 2026</option>
+                  <option value="custom">Custom timeframe</option>
+                </select>
+              </label>
+
+              <label for="report-from">
+                From
+                <input id="report-from" type="date" value="2026-08-24" />
+              </label>
+
+              <label for="report-to">
+                To
+                <input id="report-to" type="date" value="2026-12-18" />
+              </label>
+
+              <button type="button" id="btn-run-report">Run report</button>
+            </form>
+
+            <div class="checkout-report-summary" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <strong id="summary-semester">Fall 2026 (current)</strong>
+                <span id="summary-date-range" style="margin-left: 0.5rem; color: #6b6474;">Aug 24, 2026 – Dec 18, 2026</span>
+              </div>
+              <div id="summary-totals">
+                <strong>38</strong> checkouts · <strong>3.8</strong> days on average
+              </div>
+            </div>
+
+            <div class="table-container" style="overflow-x: auto">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Equipment</th>
+                    <th>Category</th>
+                    <th>Checkouts</th>
+                    <th>Avg. Length</th>
+                    <th>Total Days Out</th>
+                    <th style="text-align: right">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="report-rows">
+                  <tr>
+                    <td>
+                      <strong>Mirrorless Camera Kit</strong>
+                      <small>EQ-001</small>
+                    </td>
+                    <td>Creative Technology</td>
+                    <td><strong>6</strong></td>
+                    <td>4.2 days</td>
+                    <td>25 days</td>
+                    <td style="text-align: right">
+                      <button type="button" class="secondary-action" style="padding: 0.35rem 0.65rem; font-size: 0.75rem" onclick="downloadCsv('Mirrorless Camera Kit', 'EQ-001', 6, 4.2, 25)">
+                        Download CSV
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Nintendo Switch</strong>
+                      <small>EQ-002</small>
+                    </td>
+                    <td>Gaming Consoles &amp; Accessories</td>
+                    <td><strong>5</strong></td>
+                    <td>3.6 days</td>
+                    <td>18 days</td>
+                    <td style="text-align: right">
+                      <button type="button" class="secondary-action" style="padding: 0.35rem 0.65rem; font-size: 0.75rem" onclick="downloadCsv('Nintendo Switch', 'EQ-002', 5, 3.6, 18)">
+                        Download CSV
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>H4 Zoom Audio Recording Kit</strong>
+                      <small>EQ-003</small>
+                    </td>
+                    <td>Creative Technology</td>
+                    <td><strong>5</strong></td>
+                    <td>4.0 days</td>
+                    <td>20 days</td>
+                    <td style="text-align: right">
+                      <button type="button" class="secondary-action" style="padding: 0.35rem 0.65rem; font-size: 0.75rem" onclick="downloadCsv('H4 Zoom Audio Recording Kit', 'EQ-003', 5, 4.0, 20)">
+                        Download CSV
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>3D Scanning Kit (Revopoint POP 3 Plus)</strong>
+                      <small>EQ-004</small>
+                    </td>
+                    <td>Creative Technology</td>
+                    <td><strong>4</strong></td>
+                    <td>4.5 days</td>
+                    <td>18 days</td>
+                    <td style="text-align: right">
+                      <button type="button" class="secondary-action" style="padding: 0.35rem 0.65rem; font-size: 0.75rem" onclick="downloadCsv('3D Scanning Kit', 'EQ-004', 4, 4.5, 18)">
+                        Download CSV
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Rode Wireless GO II Microphone System</strong>
+                      <small>EQ-005</small>
+                    </td>
+                    <td>Creative Technology</td>
+                    <td><strong>4</strong></td>
+                    <td>3.5 days</td>
+                    <td>14 days</td>
+                    <td style="text-align: right">
+                      <button type="button" class="secondary-action" style="padding: 0.35rem 0.65rem; font-size: 0.75rem" onclick="downloadCsv('Rode Wireless GO II', 'EQ-005', 4, 3.5, 14)">
+                        Download CSV
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>PlayStation 5</strong>
+                      <small>EQ-006</small>
+                    </td>
+                    <td>Gaming Consoles &amp; Accessories</td>
+                    <td><strong>3</strong></td>
+                    <td>3.0 days</td>
+                    <td>9 days</td>
+                    <td style="text-align: right">
+                      <button type="button" class="secondary-action" style="padding: 0.35rem 0.65rem; font-size: 0.75rem" onclick="downloadCsv('PlayStation 5', 'EQ-006', 3, 3.0, 9)">
+                        Download CSV
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Portable Podcasting Kit (Zoom H6)</strong>
+                      <small>EQ-011</small>
+                    </td>
+                    <td>Creative Technology</td>
+                    <td><strong>3</strong></td>
+                    <td>4.0 days</td>
+                    <td>12 days</td>
+                    <td style="text-align: right">
+                      <button type="button" class="secondary-action" style="padding: 0.35rem 0.65rem; font-size: 0.75rem" onclick="downloadCsv('Portable Podcasting Kit', 'EQ-011', 3, 4.0, 12)">
+                        Download CSV
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>SmallRig All-in-One Smartphone Video Kit</strong>
+                      <small>EQ-012</small>
+                    </td>
+                    <td>Creative Technology</td>
+                    <td><strong>3</strong></td>
+                    <td>3.3 days</td>
+                    <td>10 days</td>
+                    <td style="text-align: right">
+                      <button type="button" class="secondary-action" style="padding: 0.35rem 0.65rem; font-size: 0.75rem" onclick="downloadCsv('SmallRig Smartphone Kit', 'EQ-012', 3, 3.3, 10)">
+                        Download CSV
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Owl 3 Video Conference Camera</strong>
+                      <small>EQ-010</small>
+                    </td>
+                    <td>Creative Technology</td>
+                    <td><strong>2</strong></td>
+                    <td>3.5 days</td>
+                    <td>7 days</td>
+                    <td style="text-align: right">
+                      <button type="button" class="secondary-action" style="padding: 0.35rem 0.65rem; font-size: 0.75rem" onclick="downloadCsv('Owl 3 Video Conference Camera', 'EQ-010', 2, 3.5, 7)">
+                        Download CSV
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>M30 Gamepad</strong>
+                      <small>EQ-009</small>
+                    </td>
+                    <td>Gaming Consoles &amp; Accessories</td>
+                    <td><strong>2</strong></td>
+                    <td>2.5 days</td>
+                    <td>5 days</td>
+                    <td style="text-align: right">
+                      <button type="button" class="secondary-action" style="padding: 0.35rem 0.65rem; font-size: 0.75rem" onclick="downloadCsv('M30 Gamepad', 'EQ-009', 2, 2.5, 5)">
+                        Download CSV
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>SN30 Pro Gamepad</strong>
+                      <small>EQ-013</small>
+                    </td>
+                    <td>Gaming Consoles &amp; Accessories</td>
+                    <td><strong>1</strong></td>
+                    <td>3.0 days</td>
+                    <td>3 days</td>
+                    <td style="text-align: right">
+                      <button type="button" class="secondary-action" style="padding: 0.35rem 0.65rem; font-size: 0.75rem" onclick="downloadCsv('SN30 Pro Gamepad', 'EQ-013', 1, 3.0, 3)">
+                        Download CSV
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; background: #faf8fc; border-top: 1px solid #e8e1ed">
+              <span style="font-size: 0.8rem; color: #6b6474">Showing 11 active equipment checkout records</span>
+              <button type="button" class="primary-action" style="padding: 0.5rem 1rem; font-size: 0.8rem" onclick="downloadFullReport()">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Export Full Semester Report (CSV)
+              </button>
+            </div>
+          </section>
+        </main>
+        <app-footer></app-footer>
+      </div>
+    </div>
+    <script>
+      function downloadCsv(name, id, checkouts, avgDays, totalDays) {
+        const csvContent = 'Equipment,ID,Total Checkouts,Average Days Out,Total Days Out\n' +
+          `"${name}","${id}",${checkouts},${avgDays},${totalDays}\n`;
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${id}_checkout_report.csv`;
+        a.click();
+        URL.revokeObjectURL(url);
+      }
+
+      function downloadFullReport() {
+        const rows = document.querySelectorAll('#report-rows tr');
+        let csv = 'Equipment,ID,Category,Total Checkouts,Average Length,Total Days Out\n';
+        rows.forEach(function(row) {
+          const cells = row.querySelectorAll('td');
+          if (cells.length >= 5) {
+            const name = cells[0].querySelector('strong').textContent.trim();
+            const id = cells[0].querySelector('small').textContent.trim();
+            const cat = cells[1].textContent.trim();
+            const count = cells[2].textContent.trim();
+            const avg = cells[3].textContent.trim();
+            const total = cells[4].textContent.trim();
+            csv += `"${name}","${id}","${cat}",${count},"${avg}","${total}"\n`;
+          }
+        });
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `ualbany_library_checkout_report_fall2026.csv`;
+        a.click();
+        URL.revokeObjectURL(url);
+      }
+
+      document.getElementById('report-semester')?.addEventListener('change', function(e) {
+        const val = e.target.value;
+        const from = document.getElementById('report-from');
+        const to = document.getElementById('report-to');
+        const summary = document.getElementById('summary-semester');
+        if (val === 'fall-2026') {
+          from.value = '2026-08-24';
+          to.value = '2026-12-18';
+          summary.textContent = 'Fall 2026 (current)';
+        } else if (val === 'summer-2026') {
+          from.value = '2026-05-26';
+          to.value = '2026-08-14';
+          summary.textContent = 'Summer 2026';
+        } else if (val === 'spring-2026') {
+          from.value = '2026-01-20';
+          to.value = '2026-05-15';
+          summary.textContent = 'Spring 2026';
+        } else {
+          summary.textContent = 'Custom timeframe';
+        }
+      });
+    </script>
+  </body>
+</html>

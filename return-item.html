@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Process equipment returns and check-in for the University Library."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="components.js"></script>
+    <title>LibraryDesk | Return Equipment</title>
+  </head>
+  <body class="loans-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell">
+      <app-sidebar current="loans"></app-sidebar>
+      <div class="page-container">
+        <app-header
+          breadcrumbs='[{"label":"Loans & returns","href":"loans.html"},{"label":"Return equipment"}]'
+        ></app-header>
+        <main id="main-content">
+          <section
+            class="page-introduction"
+            aria-labelledby="return-heading"
+          >
+            <p class="eyebrow">Library equipment workspace</p>
+            <h1 id="return-heading">Return equipment</h1>
+            <p>
+              Check in equipment, verify accessories, and inspect device condition
+              before closing the loan record.
+            </p>
+          </section>
+
+          <section
+            class="equipment-detail-panel"
+            aria-labelledby="return-form-heading"
+          >
+            <div class="equipment-detail-heading">
+              <span class="equipment-detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 7H5v4M5 11a7 7 0 1 0 2-5"></path>
+                </svg>
+              </span>
+              <div>
+                <p class="equipment-id">Circulation Desk · Check-in Station</p>
+                <h2 id="return-form-heading">Equipment Return Form</h2>
+                <span class="status-badge" style="color: #46166b; background: #f1ebf6;">Staff verification</span>
+              </div>
+              <div class="equipment-target">
+                <span>Check-in Date</span>
+                <strong>11 Oct 2026</strong>
+              </div>
+            </div>
+
+            <form class="assignment-form" action="loans.html" method="get">
+              <h3>1. Select Open Loan</h3>
+              <div class="assignment-fields">
+                <div style="grid-column: 1 / -1">
+                  <label for="loan-select">Select loan to return</label>
+                  <select id="loan-select" name="loan" required>
+                    <option value="">Choose an open loan...</option>
+                    <option value="LN-1042">LN-1042 · Emma Wilson · Mirrorless Camera Kit (Due Oct 13, 2026)</option>
+                    <option value="LN-1041">LN-1041 · James Chen · Nintendo Switch (Due today · Oct 11, 2026)</option>
+                    <option value="LN-1040">LN-1040 · Olivia Martinez · H4 Zoom Audio Recording Kit (Overdue · Oct 9, 2026)</option>
+                    <option value="LN-1039">LN-1039 · Noah Thompson · 3D Scanning Kit (Due Oct 12, 2026)</option>
+                    <option value="LN-1038">LN-1038 · Sophia Lee · Rode Wireless GO II (Due today · Oct 11, 2026)</option>
+                  </select>
+                </div>
+              </div>
+
+              <h3>2. Condition Inspection</h3>
+              <div class="assignment-fields">
+                <div>
+                  <label for="equipment-condition">Equipment condition</label>
+                  <select id="equipment-condition" name="condition" required>
+                    <option value="good">Good — all accessories included, operational</option>
+                    <option value="cleaning">Needs cleaning / sanitization</option>
+                    <option value="minor-wear">Minor cosmetic wear — fully operational</option>
+                    <option value="missing-accessory">Missing accessory or cable</option>
+                    <option value="damaged">Damaged — supervisor inspection required</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="next-destination">Next workflow step</label>
+                  <select id="next-destination" name="destination" required>
+                    <option value="prep-queue">Send to preparation queue (Needs preparation)</option>
+                    <option value="ready-shelf">Direct to ready shelf (Ready for lending)</option>
+                    <option value="tech-hold">Hold for Library Tech review</option>
+                  </select>
+                </div>
+              </div>
+
+              <h3>3. Accessory &amp; Checklist Verification</h3>
+              <div class="task-options">
+                <label>
+                  <input type="checkbox" name="power-cable" checked />
+                  Power cable &amp; charger accounted for
+                </label>
+                <label>
+                  <input type="checkbox" name="accessories-all" checked />
+                  All standard kit accessories returned
+                </label>
+                <label>
+                  <input type="checkbox" name="storage-cleared" checked />
+                  Memory card / internal storage cleared
+                </label>
+                <label>
+                  <input type="checkbox" name="device-tested" checked />
+                  Device powered on and tested
+                </label>
+              </div>
+
+              <div>
+                <label for="return-notes">Check-in notes or damage remarks</label>
+                <textarea
+                  id="return-notes"
+                  name="notes"
+                  rows="3"
+                  placeholder="Record any missing accessories, device condition, or maintenance requests..."
+                ></textarea>
+              </div>
+
+              <div class="detail-actions" style="margin-top: 1.5rem; display: flex; gap: 0.75rem; align-items: center">
+                <button class="primary-action" type="submit">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Confirm return &amp; update inventory
+                </button>
+                <a class="secondary-action" href="loans.html">Cancel</a>
+              </div>
+            </form>
+          </section>
+        </main>
+        <app-footer></app-footer>
+      </div>
+    </div>
+    <script>
+      (function() {
+        const params = new URLSearchParams(window.location.search);
+        const loanParam = params.get('loan') || params.get('id');
+        if (loanParam) {
+          const select = document.getElementById('loan-select');
+          if (select) {
+            for (let i = 0; i < select.options.length; i++) {
+              if (select.options[i].value === loanParam || select.options[i].text.includes(loanParam)) {
+                select.selectedIndex = i;
+                break;
+              }
+            }
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -914,6 +914,9 @@ main {
 }
 
 .assignment-form select,
+.assignment-form input[type="text"],
+.assignment-form input[type="email"],
+.assignment-form input[type="number"],
 .assignment-form input[type="date"],
 .assignment-form textarea {
   width: 100%;
@@ -2078,7 +2081,7 @@ tbody tr:last-child td {
   justify-items: center;
   min-width: 0;
   padding: clamp(2rem, 5vw, 5rem);
-  background: #fbf9fd;
+  background: #f1ebf6;
 }
 
 .login-card {
@@ -2160,33 +2163,23 @@ tbody tr:last-child td {
 
 .login-footer {
   position: absolute;
+  right: 0;
   bottom: 1.25rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
   z-index: 10;
   pointer-events: none;
   text-align: center;
-  width: max-content;
-  max-width: calc(100vw - 2rem);
 }
 
 .login-footer p {
   margin: 0;
-  display: inline-block;
-  padding: 0.45rem 1.25rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: #3b1754;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(70, 22, 107, 0.12);
-  border-radius: 9999px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  color: #eeb211;
+  font-size: 0.8rem;
+  font-weight: 600;
   letter-spacing: 0.01em;
-  white-space: nowrap;
 }
 
 @media (max-width: 800px) {
@@ -2295,14 +2288,14 @@ tbody tr:last-child td {
     bottom: auto;
     width: 100%;
     max-width: 100%;
-    padding: 1rem 1.5rem 1.5rem;
+    padding: 1.25rem 1rem;
     grid-column: 1;
     grid-row: 3;
+    background: #46166b;
   }
 
   .login-footer p {
-    white-space: normal;
-    border-radius: 12px;
+    color: #eeb211;
   }
 }
 

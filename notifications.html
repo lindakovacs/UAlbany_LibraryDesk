@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Staff workspace notifications, alerts for overdue equipment, and readiness tasks."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="components.js"></script>
+    <title>LibraryDesk | Notifications</title>
+  </head>
+  <body class="overview-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell">
+      <app-sidebar current="overview"></app-sidebar>
+      <div class="page-container">
+        <app-header breadcrumbs="Notifications"></app-header>
+        <main id="main-content">
+          <section
+            class="page-introduction"
+            aria-labelledby="notifications-heading"
+          >
+            <p class="eyebrow">Staff alert center</p>
+            <h1 id="notifications-heading">Notifications &amp; alerts</h1>
+            <p>
+              Items requiring circulation desk attention, overdue equipment,
+              and readiness reviews.
+            </p>
+          </section>
+
+          <section class="dashboard-section loan-panel" aria-labelledby="alerts-list-heading">
+            <div class="section-heading">
+              <div>
+                <h2 id="alerts-list-heading">Active alerts</h2>
+                <p>5 items needing attention</p>
+              </div>
+              <button
+                type="button"
+                class="secondary-action"
+                onclick="alert('All notifications marked as reviewed.')"
+              >
+                Mark all as read
+              </button>
+            </div>
+
+            <div class="tabs" role="tablist" style="padding: 0 1.25rem 0.5rem; display: flex; gap: 0.5rem; border-bottom: 1px solid #e8e1ed">
+              <button class="tab-link active-tab" type="button" style="background: none; border: 0; font: inherit; cursor: pointer" onclick="filterAlerts('all', this)">
+                All alerts <span>5</span>
+              </button>
+              <button class="tab-link" type="button" style="background: none; border: 0; font: inherit; cursor: pointer" onclick="filterAlerts('overdue', this)">
+                Overdue <span>1</span>
+              </button>
+              <button class="tab-link" type="button" style="background: none; border: 0; font: inherit; cursor: pointer" onclick="filterAlerts('due', this)">
+                Due today <span>2</span>
+              </button>
+              <button class="tab-link" type="button" style="background: none; border: 0; font: inherit; cursor: pointer" onclick="filterAlerts('prep', this)">
+                Preparation <span>2</span>
+              </button>
+            </div>
+
+            <div class="notifications-list" style="padding: 1rem 1.25rem; display: flex; flex-direction: column; gap: 1rem">
+              <!-- Alert 1: Overdue -->
+              <article class="alert-card" data-category="overdue" style="display: flex; justify-content: space-between; align-items: center; padding: 1.25rem; background: #fff; border: 1px solid #fad2cf; border-left: 4px solid #d9383a; border-radius: 0.5rem; gap: 1rem">
+                <div style="display: flex; gap: 1rem; align-items: flex-start">
+                  <span style="display: grid; width: 2.25rem; height: 2.25rem; place-items: center; background: #fdf2f2; color: #d9383a; border-radius: 50%; font-weight: bold; flex-shrink: 0">!</span>
+                  <div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem">
+                      <strong style="color: #252525; font-size: 0.95rem">Overdue loan: Olivia Martinez</strong>
+                      <span class="loan-status overdue">2 days overdue</span>
+                    </div>
+                    <p style="margin: 0 0 0.35rem; color: #5f6872; font-size: 0.85rem">
+                      H4 Zoom Audio Recording Kit (EQ-003) was due on Oct 9, 2026. University ID: 001492831.
+                    </p>
+                    <small style="color: #8c8295; font-size: 0.75rem">Checked out: Oct 5, 2026</small>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; flex-shrink: 0">
+                  <a class="primary-action" href="return-item.html?loan=LN-1040" style="padding: 0.45rem 0.85rem; font-size: 0.8rem">
+                    Process return
+                  </a>
+                  <a class="secondary-action" href="loan-details.html" style="padding: 0.45rem 0.85rem; font-size: 0.8rem">
+                    View loan
+                  </a>
+                </div>
+              </article>
+
+              <!-- Alert 2: Due today -->
+              <article class="alert-card" data-category="due" style="display: flex; justify-content: space-between; align-items: center; padding: 1.25rem; background: #fff; border: 1px solid #fdecc8; border-left: 4px solid #d97706; border-radius: 0.5rem; gap: 1rem">
+                <div style="display: flex; gap: 1rem; align-items: flex-start">
+                  <span style="display: grid; width: 2.25rem; height: 2.25rem; place-items: center; background: #fef9ee; color: #d97706; border-radius: 50%; font-weight: bold; flex-shrink: 0">&#128337;</span>
+                  <div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem">
+                      <strong style="color: #252525; font-size: 0.95rem">Due today: James Chen</strong>
+                      <span class="loan-status due">Due today</span>
+                    </div>
+                    <p style="margin: 0 0 0.35rem; color: #5f6872; font-size: 0.85rem">
+                      Nintendo Switch (EQ-002) is expected back by 5:00 PM today. University ID: 001573024.
+                    </p>
+                    <small style="color: #8c8295; font-size: 0.75rem">Checked out: Oct 7, 2026</small>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; flex-shrink: 0">
+                  <a class="primary-action" href="return-item.html?loan=LN-1041" style="padding: 0.45rem 0.85rem; font-size: 0.8rem">
+                    Process return
+                  </a>
+                  <a class="secondary-action" href="loans.html" style="padding: 0.45rem 0.85rem; font-size: 0.8rem">
+                    View loan
+                  </a>
+                </div>
+              </article>
+
+              <!-- Alert 3: Due today -->
+              <article class="alert-card" data-category="due" style="display: flex; justify-content: space-between; align-items: center; padding: 1.25rem; background: #fff; border: 1px solid #fdecc8; border-left: 4px solid #d97706; border-radius: 0.5rem; gap: 1rem">
+                <div style="display: flex; gap: 1rem; align-items: flex-start">
+                  <span style="display: grid; width: 2.25rem; height: 2.25rem; place-items: center; background: #fef9ee; color: #d97706; border-radius: 50%; font-weight: bold; flex-shrink: 0">&#128337;</span>
+                  <div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem">
+                      <strong style="color: #252525; font-size: 0.95rem">Due today: Sophia Lee</strong>
+                      <span class="loan-status due">Due today</span>
+                    </div>
+                    <p style="margin: 0 0 0.35rem; color: #5f6872; font-size: 0.85rem">
+                      Rode Wireless GO II Microphone System (EQ-005) is due before closing. University ID: 001482610.
+                    </p>
+                    <small style="color: #8c8295; font-size: 0.75rem">Checked out: Oct 7, 2026</small>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; flex-shrink: 0">
+                  <a class="primary-action" href="return-item.html?loan=LN-1038" style="padding: 0.45rem 0.85rem; font-size: 0.8rem">
+                    Process return
+                  </a>
+                  <a class="secondary-action" href="loans.html" style="padding: 0.45rem 0.85rem; font-size: 0.8rem">
+                    View loan
+                  </a>
+                </div>
+              </article>
+
+              <!-- Alert 4: Preparation review -->
+              <article class="alert-card" data-category="prep" style="display: flex; justify-content: space-between; align-items: center; padding: 1.25rem; background: #fff; border: 1px solid #d8cfe0; border-left: 4px solid #46166b; border-radius: 0.5rem; gap: 1rem">
+                <div style="display: flex; gap: 1rem; align-items: flex-start">
+                  <span style="display: grid; width: 2.25rem; height: 2.25rem; place-items: center; background: #f1ebf6; color: #46166b; border-radius: 50%; font-weight: bold; flex-shrink: 0">&#10003;</span>
+                  <div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem">
+                      <strong style="color: #252525; font-size: 0.95rem">Readiness review: Portable Podcasting Kit (Zoom H6)</strong>
+                      <span class="status-badge" style="color: #46166b; background: #f1ebf6">Awaiting review</span>
+                    </div>
+                    <p style="margin: 0 0 0.35rem; color: #5f6872; font-size: 0.85rem">
+                      EQ-011 preparation completed by Alex Chen (4 of 4 steps). Ready for staff supervisor review.
+                    </p>
+                    <small style="color: #8c8295; font-size: 0.75rem">Target date: Oct 15, 2026</small>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; flex-shrink: 0">
+                  <a class="primary-action" href="preparation-review-details.html" style="padding: 0.45rem 0.85rem; font-size: 0.8rem">
+                    Review equipment
+                  </a>
+                </div>
+              </article>
+
+              <!-- Alert 5: Preparation review -->
+              <article class="alert-card" data-category="prep" style="display: flex; justify-content: space-between; align-items: center; padding: 1.25rem; background: #fff; border: 1px solid #d8cfe0; border-left: 4px solid #46166b; border-radius: 0.5rem; gap: 1rem">
+                <div style="display: flex; gap: 1rem; align-items: flex-start">
+                  <span style="display: grid; width: 2.25rem; height: 2.25rem; place-items: center; background: #f1ebf6; color: #46166b; border-radius: 50%; font-weight: bold; flex-shrink: 0">&#10003;</span>
+                  <div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem">
+                      <strong style="color: #252525; font-size: 0.95rem">Readiness review: Rode Wireless GO II</strong>
+                      <span class="status-badge" style="color: #46166b; background: #f1ebf6">Awaiting review</span>
+                    </div>
+                    <p style="margin: 0 0 0.35rem; color: #5f6872; font-size: 0.85rem">
+                      EQ-005 preparation completed by Maria Santos (4 of 4 steps). Ready for staff supervisor review.
+                    </p>
+                    <small style="color: #8c8295; font-size: 0.75rem">Target date: Oct 16, 2026</small>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; flex-shrink: 0">
+                  <a class="primary-action" href="preparation-review.html" style="padding: 0.45rem 0.85rem; font-size: 0.8rem">
+                    Review queue
+                  </a>
+                </div>
+              </article>
+            </div>
+          </section>
+        </main>
+        <app-footer></app-footer>
+      </div>
+    </div>
+    <script>
+      function filterAlerts(category, btn) {
+        const tabs = btn.parentElement.querySelectorAll('.tab-link');
+        tabs.forEach(t => t.classList.remove('active-tab'));
+        btn.classList.add('active-tab');
+
+        const cards = document.querySelectorAll('.alert-card');
+        cards.forEach(card => {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

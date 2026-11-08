@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Review library loan details, borrower status, and due dates."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="components.js"></script>
+    <title>LibraryDesk | Loan Details</title>
+  </head>
+  <body class="loans-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="app-shell">
+      <app-sidebar current="loans"></app-sidebar>
+      <div class="page-container">
+        <app-header
+          breadcrumbs='[{"label":"Loans & returns","href":"loans.html"},{"label":"Loan details"}]'
+        ></app-header>
+        <main id="main-content">
+          <section
+            class="page-introduction"
+            aria-labelledby="loan-details-heading"
+          >
+            <p class="eyebrow">University Library · Equipment circulation</p>
+            <h1 id="loan-details-heading">Loan record: LN-1042</h1>
+            <p>
+              Detailed record for active equipment loan to Emma Wilson.
+            </p>
+          </section>
+
+          <section
+            class="equipment-detail-panel"
+            aria-labelledby="item-name"
+          >
+            <div class="equipment-detail-heading">
+              <span class="equipment-detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              </span>
+              <div>
+                <p class="equipment-id">EQ-001 · Creative Technology</p>
+                <h2 id="item-name">Mirrorless Camera Kit</h2>
+                <span class="loan-status active">On loan</span>
+              </div>
+              <div class="equipment-target">
+                <span>Due Date</span>
+                <strong>13 Oct 2026</strong>
+              </div>
+            </div>
+
+            <div class="detail-columns">
+              <section aria-labelledby="borrower-summary-heading">
+                <h3 id="borrower-summary-heading">Borrower Information</h3>
+                <dl class="detail-list">
+                  <div>
+                    <dt>Full name</dt>
+                    <dd>Emma Wilson</dd>
+                  </div>
+                  <div>
+                    <dt>NetID</dt>
+                    <dd>emma.wilson</dd>
+                  </div>
+                  <div>
+                    <dt>University ID</dt>
+                    <dd>001482759</dd>
+                  </div>
+                  <div>
+                    <dt>Affiliation</dt>
+                    <dd>Undergraduate Student</dd>
+                  </div>
+                  <div>
+                    <dt>Department</dt>
+                    <dd>Art &amp; Art History</dd>
+                  </div>
+                  <div>
+                    <dt>Email</dt>
+                    <dd>emma.wilson@ualbany.edu</dd>
+                  </div>
+                  <div>
+                    <dt>Account standing</dt>
+                    <dd><span class="borrower-status good">Good standing</span></dd>
+                  </div>
+                </dl>
+              </section>
+
+              <section aria-labelledby="loan-summary-heading">
+                <h3 id="loan-summary-heading">Loan Specifications</h3>
+                <dl class="detail-list">
+                  <div>
+                    <dt>Loan ID</dt>
+                    <dd>LN-1042</dd>
+                  </div>
+                  <div>
+                    <dt>Checked out</dt>
+                    <dd>Oct 9, 2026 · 11:20 AM</dd>
+                  </div>
+                  <div>
+                    <dt>Return due date</dt>
+                    <dd>Oct 13, 2026 (4-day loan)</dd>
+                  </div>
+                  <div>
+                    <dt>Asset barcode</dt>
+                    <dd>ALB-CAM-004</dd>
+                  </div>
+                  <div>
+                    <dt>Registrar</dt>
+                    <dd>Linda Kovacs (Circulation)</dd>
+                  </div>
+                  <div>
+                    <dt>Return desk</dt>
+                    <dd>University Library Circulation Desk</dd>
+                  </div>
+                </dl>
+              </section>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #eeeaf1">
+              <h3 style="margin: 0 0 0.75rem; color: #2b2034; font-size: 0.95rem">Included Kit Accessories</h3>
+              <p style="margin: 0; color: #5f6872; font-size: 0.85rem; line-height: 1.6">
+                Sony Alpha body, 24-70mm f/2.8 lens with front/rear caps, 2x rechargeable NP-FZ100 batteries, dual battery charger with wall cable, padded neck strap, SanDisk 128GB Extreme PRO SD card, and weather-resistant carrying bag.
+              </p>
+            </div>
+
+            <div class="detail-actions" style="margin-top: 2rem; display: flex; gap: 0.75rem; align-items: center">
+              <a class="primary-action" href="return-item.html?loan=LN-1042">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7H5v4M5 11a7 7 0 1 0 2-5"></path>
+                </svg>
+                Return equipment
+              </a>
+              <a class="secondary-action" href="new-loan.html">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                New checkout
+              </a>
+              <a class="secondary-action" href="loans.html">Back to loans list</a>
+            </div>
+          </section>
+        </main>
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </body>
+</html>

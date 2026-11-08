@@ -421,29 +421,57 @@
       }
     }
 
-    // 3. Equipment cards search filter
+    // 3. Equipment cards search & category filter
     const equipmentSearch = document.getElementById('equipment-search');
-    if (equipmentSearch && !equipmentSearch.dataset.bound) {
-      equipmentSearch.dataset.bound = 'true';
-      const grid = document.querySelector('.equipment-grid');
-      const countEl = document.querySelector('.equipment-search-count');
-      if (grid) {
-        const cards = Array.from(grid.querySelectorAll('article'));
-        equipmentSearch.addEventListener('input', () => {
-          const query = equipmentSearch.value.trim().toLowerCase();
-          let visibleCount = 0;
+    const categorySelect = document.querySelector('.equipment-toolbar select') || document.querySelector('select[aria-label="Filter by category"]');
+    const grid = document.querySelector('.equipment-grid');
+    if (grid && !grid.dataset.bound) {
+      grid.dataset.bound = 'true';
+      const cards = Array.from(grid.querySelectorAll('article'));
+      const countEl = document.querySelector('.equipment-search-count') || document.querySelector('.equipment-toolbar span');
 
-          cards.forEach((card) => {
-            const text = card.textContent.toLowerCase();
-            const matches = !query || text.includes(query);
-            card.style.display = matches ? '' : 'none';
-            if (matches) visibleCount++;
-          });
+      const filterEquipment = () => {
+        const query = (equipmentSearch ? equipmentSearch.value : '').trim().toLowerCase();
+        const selectedCat = categorySelect ? categorySelect.value : 'All categories';
+        let visibleCount = 0;
 
-          if (countEl) {
-            countEl.textContent = `${visibleCount} item${visibleCount === 1 ? '' : 's'}`;
-          }
+        cards.forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          const matchesQuery = !query || text.includes(query);
+          const matchesCat = selectedCat === 'All categories' || card.textContent.includes(selectedCat);
+          const show = matchesQuery && matchesCat;
+          card.style.display = show ? '' : 'none';
+          if (show) visibleCount++;
         });
+
+        if (countEl) {
+          countEl.textContent = `${visibleCount} item${visibleCount === 1 ? '' : 's'}`;
+        }
+
+        let emptyEl = grid.querySelector('.equipment-empty-card');
+        if (visibleCount === 0) {
+          if (!emptyEl) {
+            emptyEl = document.createElement('div');
+            emptyEl.className = 'equipment-empty-card';
+            emptyEl.style.cssText = 'grid-column: 1 / -1; padding: 3rem; text-align: center; color: #6b6474; font-style: italic; background: #fff; border: 1px dashed #cfc5d6; border-radius: 0.6rem;';
+            emptyEl.textContent = query ? `No equipment matches "${query}"` : 'No equipment available in this category.';
+            grid.appendChild(emptyEl);
+          } else {
+            emptyEl.style.display = '';
+            emptyEl.textContent = query ? `No equipment matches "${query}"` : 'No equipment available in this category.';
+          }
+        } else if (emptyEl) {
+          emptyEl.style.display = 'none';
+        }
+      };
+
+      if (equipmentSearch && !equipmentSearch.dataset.bound) {
+        equipmentSearch.dataset.bound = 'true';
+        equipmentSearch.addEventListener('input', filterEquipment);
+      }
+      if (categorySelect && !categorySelect.dataset.bound) {
+        categorySelect.dataset.bound = 'true';
+        categorySelect.addEventListener('change', filterEquipment);
       }
     }
 
@@ -452,14 +480,41 @@
     if (borrowerSearch && !borrowerSearch.dataset.bound) {
       borrowerSearch.dataset.bound = 'true';
       const table = document.querySelector('.borrower-table') || document.querySelector('.borrower-panel table');
+      const footerCount = document.querySelector('.borrower-footer span:first-child');
       if (table) {
-        const rows = Array.from(table.querySelectorAll('tbody tr'));
+        const rows = Array.from(table.querySelectorAll('tbody tr:not(.table-empty-row)'));
+        const totalCount = rows.length;
+
         borrowerSearch.addEventListener('input', () => {
           const query = borrowerSearch.value.trim().toLowerCase();
+          let visibleCount = 0;
+
           rows.forEach((row) => {
             const text = row.textContent.toLowerCase();
-            row.style.display = !query || text.includes(query) ? '' : 'none';
+            const matches = !query || text.includes(query);
+            row.style.display = matches ? '' : 'none';
+            if (matches) visibleCount++;
           });
+
+          if (footerCount) {
+            footerCount.textContent = `Showing ${visibleCount} of ${totalCount} borrowers`;
+          }
+
+          let emptyRow = table.querySelector('.table-empty-row');
+          if (visibleCount === 0) {
+            if (!emptyRow) {
+              emptyRow = document.createElement('tr');
+              emptyRow.className = 'table-empty-row';
+              const colCount = table.querySelectorAll('thead th').length || 5;
+              emptyRow.innerHTML = `<td colspan="${colCount}" class="table-empty-message">No borrowers matching "${query}"</td>`;
+              table.querySelector('tbody')?.appendChild(emptyRow);
+            } else {
+              emptyRow.style.display = '';
+              emptyRow.querySelector('td').textContent = `No borrowers matching "${query}"`;
+            }
+          } else if (emptyRow) {
+            emptyRow.style.display = 'none';
+          }
         });
       }
     }
