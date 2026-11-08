@@ -1,61 +1,252 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Equipment ready for lending.">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Equipment ready for lending." />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
     <title>LibraryDesk | Ready Equipment</title>
   </head>
   <body class="preparation-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="app-shell">
       <aside class="sidebar" aria-label="Primary">
-        <div class="brand"><a href="index.html" aria-label="LibraryDesk home"><span class="brand-symbol" aria-hidden="true"><img src="assets/favicon.svg" alt=""></span><span class="brand-copy"><span class="brand-name">LibraryDesk</span><small>UAlbany University Libraries</small></span></a></div>
+        <div class="brand">
+          <a href="index.html" aria-label="LibraryDesk home"
+            ><span class="brand-symbol" aria-hidden="true"
+              ><img src="assets/favicon.svg" alt="" /></span
+            ><span class="brand-copy"
+              ><span class="brand-name">LibraryDesk</span
+              ><small>UAlbany University Libraries</small></span
+            ></a
+          >
+        </div>
         <nav aria-label="Workspace navigation">
           <p class="nav-label">Workspace</p>
           <ul>
-            <li><a class="nav-item" href="preparation-ready.html" aria-current="page">Preparation</a></li>
+            <li>
+              <a
+                class="nav-item"
+                href="preparation-ready.html"
+                aria-current="page"
+                >Preparation</a
+              >
+            </li>
             <li><a class="nav-item" href="index.html">Overview</a></li>
             <li><a class="nav-item" href="equipment.html">Equipment</a></li>
-            <li><a class="nav-item" href="loans.html">Loans &amp; returns</a></li>
+            <li>
+              <a class="nav-item" href="loans.html">Loans &amp; returns</a>
+            </li>
             <li><a class="nav-item" href="borrowers.html">Borrowers</a></li>
           </ul>
         </nav>
-        <div class="sidebar-footer"><img class="ualbany-logo" src="assets/UAlbany_logo.svg" alt="University at Albany"><a class="nav-item" href="help.html">Help &amp; support</a><address><strong>University Library</strong><br>Uptown Campus · Albany, NY</address></div>
+        <div class="sidebar-footer">
+          <img
+            class="ualbany-logo"
+            src="assets/UAlbany_logo.svg"
+            alt="University at Albany"
+          /><a class="nav-item" href="help.html">Help &amp; support</a>
+          <address>
+            <strong>University Library</strong><br />Uptown Campus · Albany, NY
+          </address>
+        </div>
       </aside>
       <div class="page-container">
         <header class="page-header">
-          <nav class="breadcrumbs" aria-label="Breadcrumb"><span>Staff workspace</span><span aria-hidden="true">›</span><strong>Preparation dashboard</strong></nav>
-          <div class="header-actions"><span class="library-status"><span class="status-dot" aria-hidden="true"></span>Library open</span><a class="notification-link" href="notifications.html" aria-label="Notifications">&#128276;</a><a href="login.html">Sign out</a><span class="profile-divider" aria-hidden="true"></span><a class="profile-summary" href="profile.html"><span class="profile-initials" aria-hidden="true">LK</span><span><strong>Linda Kovacs</strong><small>Library staff</small></span><span aria-hidden="true">⌄</span></a></div>
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <span>Staff workspace</span><span aria-hidden="true">›</span
+            ><strong>Preparation dashboard</strong>
+          </nav>
+          <div class="header-actions">
+            <span class="library-status"
+              ><span class="status-dot" aria-hidden="true"></span>Library
+              open</span
+            ><a
+              class="notification-link"
+              href="notifications.html"
+              aria-label="Notifications"
+              >&#128276;</a
+            ><a href="login.html">Sign out</a
+            ><span class="profile-divider" aria-hidden="true"></span
+            ><a class="profile-summary" href="profile.html"
+              ><span class="profile-initials" aria-hidden="true">LK</span
+              ><span
+                ><strong>Linda Kovacs</strong><small>Library staff</small></span
+              ><span aria-hidden="true">⌄</span></a
+            >
+          </div>
         </header>
         <main id="main-content">
-          <section class="page-introduction" aria-labelledby="preparation-heading"><p class="eyebrow">University Library · Equipment preparation</p><h1 id="preparation-heading">Preparation dashboard</h1></section>
-          <section class="preparation-summary" aria-label="Preparation queue summary"><span class="summary-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 4.5V3h6v1.5M9 12l2 2 4-4"></path></svg></span><div><strong>11 items in the preparation queue</strong><small>University Library equipment collection</small></div><span class="readiness-checks"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v5c0 4.5-3.1 8.3-8 10-4.9-1.7-8-5.5-8-10V6l8-3z"></path><path d="m8.5 12 2.2 2.2 4.8-4.8"></path></svg>Readiness checks</span></section>
+          <section
+            class="page-introduction"
+            aria-labelledby="preparation-heading"
+          >
+            <p class="eyebrow">University Library · Equipment preparation</p>
+            <h1 id="preparation-heading">Preparation dashboard</h1>
+          </section>
+          <section
+            class="preparation-summary"
+            aria-label="Preparation queue summary"
+          >
+            <span class="summary-icon" aria-hidden="true"
+              ><svg viewBox="0 0 24 24">
+                <rect x="6" y="4" width="12" height="16" rx="2"></rect>
+                <path d="M9 4.5V3h6v1.5M9 12l2 2 4-4"></path></svg
+            ></span>
+            <div>
+              <strong>11 items in the preparation queue</strong
+              ><small>University Library equipment collection</small>
+            </div>
+            <span class="readiness-checks"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 3l8 3v5c0 4.5-3.1 8.3-8 10-4.9-1.7-8-5.5-8-10V6l8-3z"
+                ></path>
+                <path d="m8.5 12 2.2 2.2 4.8-4.8"></path></svg
+              >Readiness checks</span
+            >
+          </section>
           <section class="dashboard-section" aria-label="Ready equipment">
             <div class="table-container preparation-panel">
-              <div class="table-tools"><label for="preparation-search">Search equipment by ID or name</label><span class="search-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.3"></circle><path d="m16 16 4.5 4.5"></path></svg></span><input id="preparation-search" type="search" placeholder="Search equipment by ID or name"><span>2 items</span></div>
+              <div class="table-tools">
+                <label for="preparation-search"
+                  >Search equipment by ID or name</label
+                ><span class="search-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24">
+                    <circle cx="10.8" cy="10.8" r="6.3"></circle>
+                    <path d="m16 16 4.5 4.5"></path></svg></span
+                ><input
+                  id="preparation-search"
+                  type="search"
+                  placeholder="Search equipment by ID or name"
+                /><span>2 items</span>
+              </div>
               <div class="tabs" role="tablist" aria-label="Preparation status">
-                <a class="tab-link" href="preparation-progress.html">Awaiting assignment <span>4</span></a>
-                <a class="tab-link" href="preparation.html">In preparation <span>3</span></a>
-                <a class="tab-link" href="preparation-review.html">Review <span>2</span></a>
-                <a class="tab-link active-tab" href="preparation-ready.html" aria-current="page">Ready <span>2</span></a>
-                <a class="tab-link" href="preparation-all.html">All equipment <span>11</span></a>
+                <a class="tab-link" href="preparation-progress.html"
+                  >Awaiting assignment <span>4</span></a
+                >
+                <a class="tab-link" href="preparation.html"
+                  >In preparation <span>3</span></a
+                >
+                <a class="tab-link" href="preparation-review.html"
+                  >Review <span>2</span></a
+                >
+                <a
+                  class="tab-link active-tab"
+                  href="preparation-ready.html"
+                  aria-current="page"
+                  >Ready <span>2</span></a
+                >
+                <a class="tab-link" href="preparation-all.html"
+                  >All equipment <span>11</span></a
+                >
               </div>
               <table>
-                <caption>Equipment ready for lending</caption>
-                <thead><tr><th scope="col">Equipment ID / item</th><th scope="col">Status</th><th scope="col">Assigned to</th><th scope="col">Ready date</th><th scope="col">Action</th></tr></thead>
+                <caption>
+                  Equipment ready for lending
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Equipment ID / item</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Assigned to</th>
+                    <th scope="col">Ready date</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
                 <tbody>
-                  <tr><td><span class="selection-circle selected" role="radio" aria-label="3D Scanning Kit selected"></span><span class="equipment-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path><circle cx="12" cy="13.5" r="3"></circle></svg></span><span class="equipment-details"><strong>3D Scanning Kit (Revopoint POP 3 Plus)</strong><small>EQ-004</small></span></td><td><span class="status-badge ready">Ready for lending</span></td><td>John Doe</td><td>14 Oct 2026</td><td><a class="row-arrow" href="preparation-details.html" aria-label="View 3D Scanning Kit details"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
-                  <tr><td><span class="selection-circle" role="radio" aria-label="M30 Gamepad"></span><span class="equipment-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M8 10v4M6 12h4M16 10v.01M18 12v.01"></path></svg></span><span class="equipment-details"><strong>M30 Gamepad</strong><small>EQ-009</small></span></td><td><span class="status-badge ready">Ready for lending</span></td><td>Maria Santos</td><td>14 Oct 2026</td><td><a class="row-arrow" href="preparation-details.html" aria-label="View M30 Gamepad details"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
+                  <tr>
+                    <td>
+                      <span
+                        class="selection-circle selected"
+                        role="radio"
+                        aria-label="3D Scanning Kit selected"
+                      ></span
+                      ><span class="equipment-icon" aria-hidden="true"
+                        ><svg viewBox="0 0 24 24">
+                          <path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path>
+                          <circle cx="12" cy="13.5" r="3"></circle></svg></span
+                      ><span class="equipment-details"
+                        ><strong>3D Scanning Kit (Revopoint POP 3 Plus)</strong
+                        ><small>EQ-004</small></span
+                      >
+                    </td>
+                    <td>
+                      <span class="status-badge ready">Ready for lending</span>
+                    </td>
+                    <td>John Doe</td>
+                    <td>14 Oct 2026</td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="preparation-details.html"
+                        aria-label="View 3D Scanning Kit details"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span
+                        class="selection-circle"
+                        role="radio"
+                        aria-label="M30 Gamepad"
+                      ></span
+                      ><span class="equipment-icon" aria-hidden="true"
+                        ><svg viewBox="0 0 24 24">
+                          <rect
+                            x="3"
+                            y="6"
+                            width="18"
+                            height="12"
+                            rx="2"
+                          ></rect>
+                          <path
+                            d="M8 10v4M6 12h4M16 10v.01M18 12v.01"
+                          ></path></svg></span
+                      ><span class="equipment-details"
+                        ><strong>M30 Gamepad</strong><small>EQ-009</small></span
+                      >
+                    </td>
+                    <td>
+                      <span class="status-badge ready">Ready for lending</span>
+                    </td>
+                    <td>Maria Santos</td>
+                    <td>14 Oct 2026</td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="preparation-details.html"
+                        aria-label="View M30 Gamepad details"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
-              <div class="table-footer"><span>EQ-004 selected</span><a class="primary-action" href="preparation-details.html">View equipment details<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></div>
+              <div class="table-footer">
+                <span>EQ-004 selected</span
+                ><a class="primary-action" href="preparation-details.html"
+                  >View equipment details<svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                ></a>
+              </div>
             </div>
           </section>
         </main>
-        <footer class="page-footer"><p class="footer-brand">LibraryDesk · UAlbany University Libraries</p><p class="copyright">&copy; 2026 UAlbany Library | Team KofN1: Linda Kovacs, Veronica Dindial, Rym Mahiddine, Wendy Ouedraogo, Amari Scott</p></footer>
+        <footer class="page-footer">
+          <p class="footer-brand">LibraryDesk · UAlbany University Libraries</p>
+          <p class="copyright">
+            &copy; 2026 UAlbany Library | Team KofN1: Linda Kovacs, Veronica
+            Dindial, Rym Mahiddine, Wendy Ouedraogo, Amari Scott
+          </p>
+        </footer>
       </div>
     </div>
   </body>

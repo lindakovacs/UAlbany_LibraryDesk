@@ -1,38 +1,336 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Manage library equipment checkouts, due dates, overdue items, and returns.">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Manage library equipment checkouts, due dates, overdue items, and returns."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
     <title>LibraryDesk | Loans &amp; Returns</title>
   </head>
   <body class="loans-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="app-shell">
       <aside class="sidebar" aria-label="Primary">
-        <div class="brand"><a href="index.html" aria-label="LibraryDesk home"><span class="brand-symbol" aria-hidden="true"><img src="assets/favicon.svg" alt=""></span><span class="brand-copy"><span class="brand-name">LibraryDesk</span><small>UAlbany University Libraries</small></span></a></div>
-        <nav aria-label="Workspace navigation"><p class="nav-label">Workspace</p><ul><li><a class="nav-item" href="preparation-progress.html">Preparation</a></li><li><a class="nav-item" href="index.html">Overview</a></li><li><a class="nav-item" href="equipment.html">Equipment</a></li><li><a class="nav-item" href="loans.html" aria-current="page">Loans &amp; returns</a></li><li><a class="nav-item" href="borrowers.html">Borrowers</a></li></ul></nav>
-        <div class="sidebar-footer"><img class="ualbany-logo" src="assets/UAlbany_logo.svg" alt="University at Albany"><a class="nav-item" href="help.html">Help &amp; support</a><address><strong>University Library</strong><br>Uptown Campus · Albany, NY</address></div>
+        <div class="brand">
+          <a href="index.html" aria-label="LibraryDesk home"
+            ><span class="brand-symbol" aria-hidden="true"
+              ><img src="assets/favicon.svg" alt="" /></span
+            ><span class="brand-copy"
+              ><span class="brand-name">LibraryDesk</span
+              ><small>UAlbany University Libraries</small></span
+            ></a
+          >
+        </div>
+        <nav aria-label="Workspace navigation">
+          <p class="nav-label">Workspace</p>
+          <ul>
+            <li>
+              <a class="nav-item" href="preparation-progress.html"
+                >Preparation</a
+              >
+            </li>
+            <li><a class="nav-item" href="index.html">Overview</a></li>
+            <li><a class="nav-item" href="equipment.html">Equipment</a></li>
+            <li>
+              <a class="nav-item" href="loans.html" aria-current="page"
+                >Loans &amp; returns</a
+              >
+            </li>
+            <li><a class="nav-item" href="borrowers.html">Borrowers</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <img
+            class="ualbany-logo"
+            src="assets/UAlbany_logo.svg"
+            alt="University at Albany"
+          /><a class="nav-item" href="help.html">Help &amp; support</a>
+          <address>
+            <strong>University Library</strong><br />Uptown Campus · Albany, NY
+          </address>
+        </div>
       </aside>
       <div class="page-container">
-        <header class="page-header"><nav class="breadcrumbs" aria-label="Breadcrumb"><span>Staff workspace</span><span aria-hidden="true">›</span><strong>Loans &amp; returns</strong></nav><div class="header-actions"><span class="library-status"><span class="status-dot" aria-hidden="true"></span>Library open</span><a class="notification-link" href="notifications.html" aria-label="Notifications">&#128276;</a><a href="login.html">Sign out</a><span class="profile-divider" aria-hidden="true"></span><a class="profile-summary" href="profile.html"><span class="profile-initials" aria-hidden="true">LK</span><span><strong>Linda Kovacs</strong><small>Library staff</small></span><span aria-hidden="true">⌄</span></a></div></header>
+        <header class="page-header">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <span>Staff workspace</span><span aria-hidden="true">›</span
+            ><strong>Loans &amp; returns</strong>
+          </nav>
+          <div class="header-actions">
+            <span class="library-status"
+              ><span class="status-dot" aria-hidden="true"></span>Library
+              open</span
+            ><a
+              class="notification-link"
+              href="notifications.html"
+              aria-label="Notifications"
+              >&#128276;</a
+            ><a href="login.html">Sign out</a
+            ><span class="profile-divider" aria-hidden="true"></span
+            ><a class="profile-summary" href="profile.html"
+              ><span class="profile-initials" aria-hidden="true">LK</span
+              ><span
+                ><strong>Linda Kovacs</strong><small>Library staff</small></span
+              ><span aria-hidden="true">⌄</span></a
+            >
+          </div>
+        </header>
         <main id="main-content">
-          <section class="page-introduction loans-introduction" aria-labelledby="loans-heading"><p class="eyebrow">Library equipment workspace</p><h1 id="loans-heading">Loans &amp; returns</h1><p>Keep every checkout and return moving smoothly.</p><a class="primary-action new-checkout-action" href="new-loan.html"><span aria-hidden="true">+</span>New checkout</a></section>
-          <section class="dashboard-section loan-panel" aria-labelledby="loan-list-heading">
-            <div class="loan-overview"><span>5 open loans · 0 returned</span><a class="secondary-action return-item-action" href="return-item.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7H5v4M5 11a7 7 0 1 0 2-5"></path></svg>Return item</a></div>
-            <div class="loan-table-toolbar"><div class="loan-tabs" role="tablist" aria-label="Loan status"><a class="active" href="loans.html" aria-current="page">All loans <span>5</span></a><a href="loans-overdue.html">Overdue <span>1</span></a></div><div class="loan-tools"><label for="loan-search">Search loans</label><span class="loan-search-icon" aria-hidden="true">⌕</span><input id="loan-search" type="search" placeholder="Search loans..."><button class="filter-button" type="button" aria-label="Filter loans">☷</button></div></div>
-            <div class="table-container loan-table-container"><table><caption>Library equipment loans</caption><thead><tr><th scope="col">Equipment</th><th scope="col">Registrar</th><th scope="col">Borrower</th><th scope="col">Checked out</th><th scope="col">Due date</th><th scope="col">Status</th><th scope="col">Action</th></tr></thead><tbody>
-              <tr><td><span class="loan-equipment-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path><circle cx="12" cy="13.5" r="3"></circle></svg></span><strong>Mirrorless Camera Kit</strong><small>EQ-001 · Creative Technology</small></td><td>NO</td><td><span class="borrower-cell"><strong>Emma Wilson</strong><small>001482759</small></span></td><td>Oct 9, 2026</td><td>Oct 13, 2026</td><td><span class="loan-status active">On loan</span></td><td><a class="row-arrow" href="loan-details.html" aria-label="View loan LN-1042"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
-              <tr><td><span class="loan-equipment-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"></rect><path d="M9 8v4M7 10h4M15 10v.01"></path></svg></span><strong>Nintendo Switch</strong><small>EQ-002 · Gaming Consoles and Accessories</small></td><td>NO</td><td><span class="borrower-cell"><strong>James Chen</strong><small>001573024</small></span></td><td>Oct 7, 2026</td><td>Oct 11, 2026</td><td><span class="loan-status due">Due today</span></td><td><a class="row-arrow" href="loan-details.html" aria-label="View loan LN-1041"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
-              <tr><td><span class="loan-equipment-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="4" width="10" height="16" rx="2"></rect><path d="M10 8h4M10 12h4M10 16h4"></path></svg></span><strong>H4 Zoom Audio Recording Kit</strong><small>EQ-003 · Creative Technology</small></td><td>YES</td><td><span class="borrower-cell"><strong>Olivia Martinez</strong><small>001492831</small></span></td><td>Oct 5, 2026</td><td class="overdue-date">Oct 9, 2026</td><td><span class="loan-status overdue">Overdue</span></td><td><a class="row-arrow" href="loan-details.html" aria-label="View loan LN-1040"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
-              <tr><td><span class="loan-equipment-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path><circle cx="12" cy="13.5" r="3"></circle></svg></span><strong>3D Scanning Kit (Revopoint POP 3 Plus)</strong><small>EQ-004 · Creative Technology</small></td><td>NO</td><td><span class="borrower-cell"><strong>Noah Thompson</strong><small>001583902</small></span></td><td>Oct 8, 2026</td><td>Oct 12, 2026</td><td><span class="loan-status active">On loan</span></td><td><a class="row-arrow" href="loan-details.html" aria-label="View loan LN-1039"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
-              <tr><td><span class="loan-equipment-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 5v8a3 3 0 0 0 6 0V5M7 12a5 5 0 0 0 10 0M12 17v3M9 20h6"></path></svg></span><strong>Rode Wireless GO II Microphone System</strong><small>EQ-005 · Creative Technology</small></td><td>NO</td><td><span class="borrower-cell"><strong>Sophia Lee</strong><small>001482610</small></span></td><td>Oct 7, 2026</td><td>Oct 11, 2026</td><td><span class="loan-status due">Due today</span></td><td><a class="row-arrow" href="loan-details.html" aria-label="View loan LN-1038"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
-            </tbody></table><div class="loan-footer"><span>Showing 5 of 5 loans</span><span>All records up to date</span></div></div>
+          <section
+            class="page-introduction loans-introduction"
+            aria-labelledby="loans-heading"
+          >
+            <p class="eyebrow">Library equipment workspace</p>
+            <h1 id="loans-heading">Loans &amp; returns</h1>
+            <p>Keep every checkout and return moving smoothly.</p>
+            <a class="primary-action new-checkout-action" href="new-loan.html"
+              ><span aria-hidden="true">+</span>New checkout</a
+            >
+          </section>
+          <section
+            class="dashboard-section loan-panel"
+            aria-labelledby="loan-list-heading"
+          >
+            <div class="section-heading">
+              <div>
+                <h2 id="loan-list-heading">5 loans</h2>
+                <p>5 open loans · 0 returned</p>
+              </div>
+              <a
+                class="secondary-action return-item-action"
+                href="return-item.html"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7H5v4M5 11a7 7 0 1 0 2-5"></path></svg
+                >Return item</a
+              >
+            </div>
+            <div class="loan-table-toolbar">
+              <div class="loan-tabs" role="tablist" aria-label="Loan status">
+                <a class="active" href="loans.html" aria-current="page"
+                  >All loans <span>5</span></a
+                ><a href="loans-overdue.html">Overdue <span>1</span></a>
+              </div>
+              <div class="loan-tools">
+                <label for="loan-search">Search loans</label
+                ><span class="loan-search-icon" aria-hidden="true">⌕</span
+                ><input
+                  id="loan-search"
+                  type="search"
+                  placeholder="Search loans..."
+                /><button
+                  class="filter-button"
+                  type="button"
+                  aria-label="Filter loans"
+                >
+                  ☷
+                </button>
+              </div>
+            </div>
+            <div class="table-container loan-table-container">
+              <table>
+                <caption>
+                  Library equipment loans
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Equipment</th>
+                    <th scope="col">Registrar</th>
+                    <th scope="col">Borrower</th>
+                    <th scope="col">Checked out</th>
+                    <th scope="col">Due date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="loan-equipment-icon" aria-hidden="true"
+                        ><svg viewBox="0 0 24 24">
+                          <path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path>
+                          <circle cx="12" cy="13.5" r="3"></circle></svg></span
+                      ><span class="equipment-details"
+                        ><strong>Mirrorless Camera Kit</strong
+                        ><small>EQ-001 · Creative Technology</small></span
+                      >
+                    </td>
+                    <td>NO</td>
+                    <td>
+                      <span class="borrower-cell"
+                        ><strong>Emma Wilson</strong
+                        ><small>001482759</small></span
+                      >
+                    </td>
+                    <td>Oct 9, 2026</td>
+                    <td>Oct 13, 2026</td>
+                    <td><span class="loan-status active">On loan</span></td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="loan-details.html"
+                        aria-label="View loan LN-1042"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="loan-equipment-icon" aria-hidden="true"
+                        ><svg viewBox="0 0 24 24">
+                          <rect
+                            x="6"
+                            y="3"
+                            width="12"
+                            height="18"
+                            rx="2"
+                          ></rect>
+                          <path d="M9 8v4M7 10h4M15 10v.01"></path></svg></span
+                      ><span class="equipment-details"
+                        ><strong>Nintendo Switch</strong
+                        ><small>EQ-002 · Gaming Consoles and Accessories</small></span
+                      >
+                    </td>
+                    <td>NO</td>
+                    <td>
+                      <span class="borrower-cell"
+                        ><strong>James Chen</strong
+                        ><small>001573024</small></span
+                      >
+                    </td>
+                    <td>Oct 7, 2026</td>
+                    <td>Oct 11, 2026</td>
+                    <td><span class="loan-status due">Due today</span></td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="loan-details.html"
+                        aria-label="View loan LN-1041"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="loan-equipment-icon" aria-hidden="true"
+                        ><svg viewBox="0 0 24 24">
+                          <rect
+                            x="7"
+                            y="4"
+                            width="10"
+                            height="16"
+                            rx="2"
+                          ></rect>
+                          <path d="M10 8h4M10 12h4M10 16h4"></path></svg></span
+                      ><span class="equipment-details"
+                        ><strong>H4 Zoom Audio Recording Kit</strong
+                        ><small>EQ-003 · Creative Technology</small></span
+                      >
+                    </td>
+                    <td>YES</td>
+                    <td>
+                      <span class="borrower-cell"
+                        ><strong>Olivia Martinez</strong
+                        ><small>001492831</small></span
+                      >
+                    </td>
+                    <td>Oct 5, 2026</td>
+                    <td class="overdue-date">Oct 9, 2026</td>
+                    <td><span class="loan-status overdue">Overdue</span></td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="loan-details.html"
+                        aria-label="View loan LN-1040"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="loan-equipment-icon" aria-hidden="true"
+                        ><svg viewBox="0 0 24 24">
+                          <path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path>
+                          <circle cx="12" cy="13.5" r="3"></circle></svg></span
+                      ><span class="equipment-details"
+                        ><strong>3D Scanning Kit (Revopoint POP 3 Plus)</strong
+                        ><small>EQ-004 · Creative Technology</small></span
+                      >
+                    </td>
+                    <td>NO</td>
+                    <td>
+                      <span class="borrower-cell"
+                        ><strong>Noah Thompson</strong
+                        ><small>001583902</small></span
+                      >
+                    </td>
+                    <td>Oct 8, 2026</td>
+                    <td>Oct 12, 2026</td>
+                    <td><span class="loan-status active">On loan</span></td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="loan-details.html"
+                        aria-label="View loan LN-1039"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="loan-equipment-icon" aria-hidden="true"
+                        ><svg viewBox="0 0 24 24">
+                          <path
+                            d="M9 5v8a3 3 0 0 0 6 0V5M7 12a5 5 0 0 0 10 0M12 17v3M9 20h6"
+                          ></path></svg></span
+                      ><span class="equipment-details"
+                        ><strong>Rode Wireless GO II Microphone System</strong
+                        ><small>EQ-005 · Creative Technology</small></span
+                      >
+                    </td>
+                    <td>NO</td>
+                    <td>
+                      <span class="borrower-cell"
+                        ><strong>Sophia Lee</strong
+                        ><small>001482610</small></span
+                      >
+                    </td>
+                    <td>Oct 7, 2026</td>
+                    <td>Oct 11, 2026</td>
+                    <td><span class="loan-status due">Due today</span></td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="loan-details.html"
+                        aria-label="View loan LN-1038"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="loan-footer">
+                <span>Showing 5 of 5 loans</span
+                ><span>All records up to date</span>
+              </div>
+            </div>
           </section>
         </main>
-        <footer class="page-footer"><p class="footer-brand">LibraryDesk · UAlbany University Libraries</p><p class="copyright">&copy; 2026 UAlbany Library | Team KofN1: Linda Kovacs, Veronica Dindial, Rym Mahiddine, Wendy Ouedraogo, Amari Scott</p></footer>
+        <footer class="page-footer">
+          <p class="footer-brand">LibraryDesk · UAlbany University Libraries</p>
+          <p class="copyright">
+            &copy; 2026 UAlbany Library | Team KofN1: Linda Kovacs, Veronica
+            Dindial, Rym Mahiddine, Wendy Ouedraogo, Amari Scott
+          </p>
+        </footer>
       </div>
     </div>
   </body>

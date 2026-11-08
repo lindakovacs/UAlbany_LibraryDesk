@@ -1,44 +1,255 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Review library borrowers and their equipment loans.">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Review library borrowers and their equipment loans."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
     <title>LibraryDesk | Borrowers</title>
   </head>
   <body class="borrowers-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="app-shell">
       <aside class="sidebar" aria-label="Primary">
-        <div class="brand"><a href="index.html" aria-label="LibraryDesk home"><span class="brand-symbol" aria-hidden="true"><img src="assets/favicon.svg" alt=""></span><span class="brand-copy"><span class="brand-name">LibraryDesk</span><small>UAlbany University Libraries</small></span></a></div>
-        <nav aria-label="Workspace navigation"><p class="nav-label">Workspace</p><ul><li><a class="nav-item" href="preparation-progress.html">Preparation</a></li><li><a class="nav-item" href="index.html">Overview</a></li><li><a class="nav-item" href="equipment.html">Equipment</a></li><li><a class="nav-item" href="loans.html">Loans &amp; returns</a></li><li><a class="nav-item" href="borrowers.html" aria-current="page">Borrowers</a></li></ul></nav>
-        <div class="sidebar-footer"><img class="ualbany-logo" src="assets/UAlbany_logo.svg" alt="University at Albany"><a class="nav-item" href="help.html">Help &amp; support</a><address><strong>University Library</strong><br>Uptown Campus · Albany, NY</address></div>
+        <div class="brand">
+          <a href="index.html" aria-label="LibraryDesk home"
+            ><span class="brand-symbol" aria-hidden="true"
+              ><img src="assets/favicon.svg" alt="" /></span
+            ><span class="brand-copy"
+              ><span class="brand-name">LibraryDesk</span
+              ><small>UAlbany University Libraries</small></span
+            ></a
+          >
+        </div>
+        <nav aria-label="Workspace navigation">
+          <p class="nav-label">Workspace</p>
+          <ul>
+            <li>
+              <a class="nav-item" href="preparation-progress.html"
+                >Preparation</a
+              >
+            </li>
+            <li><a class="nav-item" href="index.html">Overview</a></li>
+            <li><a class="nav-item" href="equipment.html">Equipment</a></li>
+            <li>
+              <a class="nav-item" href="loans.html">Loans &amp; returns</a>
+            </li>
+            <li>
+              <a class="nav-item" href="borrowers.html" aria-current="page"
+                >Borrowers</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <img
+            class="ualbany-logo"
+            src="assets/UAlbany_logo.svg"
+            alt="University at Albany"
+          /><a class="nav-item" href="help.html">Help &amp; support</a>
+          <address>
+            <strong>University Library</strong><br />Uptown Campus · Albany, NY
+          </address>
+        </div>
       </aside>
       <div class="page-container">
-        <header class="page-header"><nav class="breadcrumbs" aria-label="Breadcrumb"><span>Staff workspace</span><span aria-hidden="true">›</span><strong>Borrowers</strong></nav><div class="header-actions"><span class="library-status"><span class="status-dot" aria-hidden="true"></span>Library open</span><a class="notification-link" href="notifications.html" aria-label="Notifications">&#128276;</a><a href="login.html">Sign out</a><span class="profile-divider" aria-hidden="true"></span><a class="profile-summary" href="profile.html"><span class="profile-initials" aria-hidden="true">LK</span><span><strong>Linda Kovacs</strong><small>Library staff</small></span><span aria-hidden="true">⌄</span></a></div></header>
+        <header class="page-header">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <span>Staff workspace</span><span aria-hidden="true">›</span
+            ><strong>Borrowers</strong>
+          </nav>
+          <div class="header-actions">
+            <span class="library-status"
+              ><span class="status-dot" aria-hidden="true"></span>Library
+              open</span
+            ><a
+              class="notification-link"
+              href="notifications.html"
+              aria-label="Notifications"
+              >&#128276;</a
+            ><a href="login.html">Sign out</a
+            ><span class="profile-divider" aria-hidden="true"></span
+            ><a class="profile-summary" href="profile.html"
+              ><span class="profile-initials" aria-hidden="true">LK</span
+              ><span
+                ><strong>Linda Kovacs</strong><small>Library staff</small></span
+              ><span aria-hidden="true">⌄</span></a
+            >
+          </div>
+        </header>
         <main id="main-content">
-          <section class="page-introduction borrowers-introduction" aria-labelledby="borrowers-heading"><p class="eyebrow">Library equipment workspace</p><h1 id="borrowers-heading">Borrowers</h1><p>Your library community, all in one place.</p></section>
-          <section class="dashboard-section borrower-panel" aria-labelledby="borrower-list-heading">
-            <div class="section-heading"><div><h2 id="borrower-list-heading">5 borrowers</h2><p>Review borrower accounts and current equipment loans.</p></div><div class="borrower-tools"><label for="borrower-search">Search borrowers</label><span aria-hidden="true">⌕</span><input id="borrower-search" type="search" placeholder="Search borrowers..."></div></div>
+          <section
+            class="page-introduction borrowers-introduction"
+            aria-labelledby="borrowers-heading"
+          >
+            <p class="eyebrow">Library equipment workspace</p>
+            <h1 id="borrowers-heading">Borrowers</h1>
+            <p>Your library community, all in one place.</p>
+          </section>
+          <section
+            class="dashboard-section borrower-panel"
+            aria-labelledby="borrower-list-heading"
+          >
+            <div class="section-heading">
+              <div>
+                <h2 id="borrower-list-heading">5 borrowers</h2>
+                <p>Review borrower accounts and current equipment loans.</p>
+              </div>
+              <div class="borrower-tools">
+                <label for="borrower-search">Search borrowers</label
+                ><span aria-hidden="true">⌕</span
+                ><input
+                  id="borrower-search"
+                  type="search"
+                  placeholder="Search borrowers..."
+                />
+              </div>
+            </div>
             <div class="table-container borrower-table-container">
               <table>
-                <caption>Library borrowers</caption>
-                <thead><tr><th scope="col">Borrower</th><th scope="col">University ID</th><th scope="col">Open loans</th><th scope="col">Account status</th><th scope="col">Action</th></tr></thead>
+                <caption>
+                  Library borrowers
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Borrower</th>
+                    <th scope="col">University ID</th>
+                    <th scope="col">Open loans</th>
+                    <th scope="col">Account status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
                 <tbody>
-                  <tr><td><span class="borrower-profile"><span class="borrower-initials">EW</span><strong>Emma Wilson</strong></span></td><td>001482759</td><td>1</td><td><span class="borrower-status good">Good standing</span></td><td><a class="row-arrow" href="loans.html" aria-label="View Emma Wilson's loan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
-                  <tr><td><span class="borrower-profile"><span class="borrower-initials">JC</span><strong>James Chen</strong></span></td><td>001573024</td><td>1</td><td><span class="borrower-status good">Good standing</span></td><td><a class="row-arrow" href="loans.html" aria-label="View James Chen's loan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
-                  <tr><td><span class="borrower-profile"><span class="borrower-initials">OM</span><strong>Olivia Martinez</strong></span></td><td>001492831</td><td>1</td><td><span class="borrower-status overdue">Overdue item</span></td><td><a class="row-arrow" href="loans.html" aria-label="View Olivia Martinez's loan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
-                  <tr><td><span class="borrower-profile"><span class="borrower-initials">NT</span><strong>Noah Thompson</strong></span></td><td>001583902</td><td>1</td><td><span class="borrower-status good">Good standing</span></td><td><a class="row-arrow" href="loans.html" aria-label="View Noah Thompson's loan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
-                  <tr><td><span class="borrower-profile"><span class="borrower-initials">SL</span><strong>Sophia Lee</strong></span></td><td>001482610</td><td>1</td><td><span class="borrower-status good">Good standing</span></td><td><a class="row-arrow" href="loans.html" aria-label="View Sophia Lee's loan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></td></tr>
+                  <tr>
+                    <td>
+                      <span class="borrower-profile"
+                        ><span class="borrower-initials">EW</span
+                        ><strong>Emma Wilson</strong></span
+                      >
+                    </td>
+                    <td>001482759</td>
+                    <td>1</td>
+                    <td>
+                      <span class="borrower-status good">Good standing</span>
+                    </td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="loans.html"
+                        aria-label="View Emma Wilson's loan"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="borrower-profile"
+                        ><span class="borrower-initials">JC</span
+                        ><strong>James Chen</strong></span
+                      >
+                    </td>
+                    <td>001573024</td>
+                    <td>1</td>
+                    <td>
+                      <span class="borrower-status good">Good standing</span>
+                    </td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="loans.html"
+                        aria-label="View James Chen's loan"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="borrower-profile"
+                        ><span class="borrower-initials">OM</span
+                        ><strong>Olivia Martinez</strong></span
+                      >
+                    </td>
+                    <td>001492831</td>
+                    <td>1</td>
+                    <td>
+                      <span class="borrower-status overdue">Overdue item</span>
+                    </td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="loans.html"
+                        aria-label="View Olivia Martinez's loan"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="borrower-profile"
+                        ><span class="borrower-initials">NT</span
+                        ><strong>Noah Thompson</strong></span
+                      >
+                    </td>
+                    <td>001583902</td>
+                    <td>1</td>
+                    <td>
+                      <span class="borrower-status good">Good standing</span>
+                    </td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="loans.html"
+                        aria-label="View Noah Thompson's loan"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="borrower-profile"
+                        ><span class="borrower-initials">SL</span
+                        ><strong>Sophia Lee</strong></span
+                      >
+                    </td>
+                    <td>001482610</td>
+                    <td>1</td>
+                    <td>
+                      <span class="borrower-status good">Good standing</span>
+                    </td>
+                    <td>
+                      <a
+                        class="row-arrow"
+                        href="loans.html"
+                        aria-label="View Sophia Lee's loan"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+                      ></a>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
-              <div class="borrower-footer"><span>Showing 5 of 5 borrowers</span><span>All records up to date</span></div>
+              <div class="borrower-footer">
+                <span>Showing 5 of 5 borrowers</span
+                ><span>All records up to date</span>
+              </div>
             </div>
           </section>
         </main>
-        <footer class="page-footer"><p class="footer-brand">LibraryDesk · UAlbany University Libraries</p><p class="copyright">&copy; 2026 UAlbany Library | Team KofN1: Linda Kovacs, Veronica Dindial, Rym Mahiddine, Wendy Ouedraogo, Amari Scott</p></footer>
+        <footer class="page-footer">
+          <p class="footer-brand">LibraryDesk · UAlbany University Libraries</p>
+          <p class="copyright">
+            &copy; 2026 UAlbany Library | Team KofN1: Linda Kovacs, Veronica
+            Dindial, Rym Mahiddine, Wendy Ouedraogo, Amari Scott
+          </p>
+        </footer>
       </div>
     </div>
   </body>

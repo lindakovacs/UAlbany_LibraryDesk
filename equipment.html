@@ -1,45 +1,389 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Browse the University Library equipment collection.">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Browse the University Library equipment collection."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
     <title>LibraryDesk | Equipment Collection</title>
   </head>
   <body class="equipment-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="app-shell">
       <aside class="sidebar" aria-label="Primary">
-        <div class="brand"><a href="index.html" aria-label="LibraryDesk home"><span class="brand-symbol" aria-hidden="true"><img src="assets/favicon.svg" alt=""></span><span class="brand-copy"><span class="brand-name">LibraryDesk</span><small>UAlbany University Libraries</small></span></a></div>
-        <nav aria-label="Workspace navigation"><p class="nav-label">Workspace</p><ul><li><a class="nav-item" href="preparation-progress.html">Preparation</a></li><li><a class="nav-item" href="index.html">Overview</a></li><li><a class="nav-item" href="equipment.html" aria-current="page">Equipment</a></li><li><a class="nav-item" href="loans.html">Loans &amp; returns</a></li><li><a class="nav-item" href="borrowers.html">Borrowers</a></li></ul></nav>
-        <div class="sidebar-footer"><img class="ualbany-logo" src="assets/UAlbany_logo.svg" alt="University at Albany"><a class="nav-item" href="help.html">Help &amp; support</a><address><strong>University Library</strong><br>Uptown Campus · Albany, NY</address></div>
+        <div class="brand">
+          <a href="index.html" aria-label="LibraryDesk home"
+            ><span class="brand-symbol" aria-hidden="true"
+              ><img src="assets/favicon.svg" alt="" /></span
+            ><span class="brand-copy"
+              ><span class="brand-name">LibraryDesk</span
+              ><small>UAlbany University Libraries</small></span
+            ></a
+          >
+        </div>
+        <nav aria-label="Workspace navigation">
+          <p class="nav-label">Workspace</p>
+          <ul>
+            <li>
+              <a class="nav-item" href="preparation-progress.html"
+                >Preparation</a
+              >
+            </li>
+            <li><a class="nav-item" href="index.html">Overview</a></li>
+            <li>
+              <a class="nav-item" href="equipment.html" aria-current="page"
+                >Equipment</a
+              >
+            </li>
+            <li>
+              <a class="nav-item" href="loans.html">Loans &amp; returns</a>
+            </li>
+            <li><a class="nav-item" href="borrowers.html">Borrowers</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <img
+            class="ualbany-logo"
+            src="assets/UAlbany_logo.svg"
+            alt="University at Albany"
+          /><a class="nav-item" href="help.html">Help &amp; support</a>
+          <address>
+            <strong>University Library</strong><br />Uptown Campus · Albany, NY
+          </address>
+        </div>
       </aside>
       <div class="page-container">
-        <header class="page-header"><nav class="breadcrumbs" aria-label="Breadcrumb"><span>Staff workspace</span><span aria-hidden="true">›</span><strong>Equipment</strong></nav><div class="header-actions"><span class="library-status"><span class="status-dot" aria-hidden="true"></span>Library open</span><a class="notification-link" href="notifications.html" aria-label="Notifications">&#128276;</a><a href="login.html">Sign out</a><span class="profile-divider" aria-hidden="true"></span><a class="profile-summary" href="profile.html"><span class="profile-initials" aria-hidden="true">LK</span><span><strong>Linda Kovacs</strong><small>Library staff</small></span><span aria-hidden="true">⌄</span></a></div></header>
+        <header class="page-header">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <span>Staff workspace</span><span aria-hidden="true">›</span
+            ><strong>Equipment</strong>
+          </nav>
+          <div class="header-actions">
+            <span class="library-status"
+              ><span class="status-dot" aria-hidden="true"></span>Library
+              open</span
+            ><a
+              class="notification-link"
+              href="notifications.html"
+              aria-label="Notifications"
+              >&#128276;</a
+            ><a href="login.html">Sign out</a
+            ><span class="profile-divider" aria-hidden="true"></span
+            ><a class="profile-summary" href="profile.html"
+              ><span class="profile-initials" aria-hidden="true">LK</span
+              ><span
+                ><strong>Linda Kovacs</strong><small>Library staff</small></span
+              ><span aria-hidden="true">⌄</span></a
+            >
+          </div>
+        </header>
         <main id="main-content">
-          <section class="page-introduction equipment-introduction" aria-labelledby="equipment-heading"><p class="eyebrow">Library equipment workspace</p><h1 id="equipment-heading">Equipment</h1><p>Everything your community needs to create, learn, and explore.</p><a class="primary-action equipment-checkout-action" href="new-loan.html"><span aria-hidden="true">+</span>New checkout</a></section>
-          <div><img class="equipment-hero" src="assets/library-equipment.jpg" alt="Library cameras and creative technology equipment"></div>
-          <section class="equipment-collection-heading" aria-labelledby="collection-heading"><h2 id="collection-heading">Equipment collection</h2><div class="equipment-search"><label for="equipment-search">Search equipment</label><span aria-hidden="true">⌕</span><input id="equipment-search" type="search" placeholder="Search equipment..."></div></section>
-          <section class="equipment-toolbar" aria-label="Equipment filters"><select aria-label="Filter by category"><option>All categories</option><option>Creative Technology</option><option>Gaming Consoles and Accessories</option></select><span>13 items</span></section>
+          <section
+            class="page-introduction equipment-introduction"
+            aria-labelledby="equipment-heading"
+          >
+            <p class="eyebrow">Library equipment workspace</p>
+            <h1 id="equipment-heading">Equipment</h1>
+            <p>
+              Everything your community needs to create, learn, and explore.
+            </p>
+            <a
+              class="primary-action equipment-checkout-action"
+              href="new-loan.html"
+              ><span aria-hidden="true">+</span>New checkout</a
+            >
+          </section>
+          <div>
+            <img
+              class="equipment-hero"
+              src="assets/library-equipment.jpg"
+              alt="Library cameras and creative technology equipment"
+            />
+          </div>
+          <section
+            class="equipment-collection-heading"
+            aria-labelledby="collection-heading"
+          >
+            <h2 id="collection-heading">Equipment collection</h2>
+            <div class="equipment-search">
+              <label for="equipment-search">Search equipment</label
+              ><span aria-hidden="true">⌕</span
+              ><input
+                id="equipment-search"
+                type="search"
+                placeholder="Search equipment..."
+              />
+            </div>
+          </section>
+          <section class="equipment-toolbar" aria-label="Equipment filters">
+            <select aria-label="Filter by category">
+              <option>All categories</option>
+              <option>Creative Technology</option>
+              <option>Gaming Consoles and Accessories</option></select
+            ><span>13 items</span>
+          </section>
           <section class="equipment-grid" aria-label="Equipment collection">
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path><circle cx="12" cy="13.5" r="3"></circle></svg></div><div><h2>Mirrorless Camera Kit</h2><p>EQ-001 · Creative Technology</p></div><div class="equipment-availability"><strong>3 of 4 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"></rect><path d="M9 8v4M7 10h4M15 10v.01"></path></svg></div><div><h2>Nintendo Switch</h2><p>EQ-002 · Gaming Consoles and Accessories</p></div><div class="equipment-availability"><strong>3 of 4 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><rect x="7" y="4" width="10" height="16" rx="2"></rect><path d="M10 8h4M10 12h4M10 16h4"></path></svg></div><div><h2>H4 Zoom Audio Recording Kit</h2><p>EQ-003 · Creative Technology</p></div><div class="equipment-availability"><strong>2 of 3 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path><circle cx="12" cy="13.5" r="3"></circle></svg></div><div><h2>3D Scanning Kit (Revopoint POP 3 Plus)</h2><p>EQ-004 · Creative Technology</p></div><div class="equipment-availability"><strong>1 of 2 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><path d="M9 5v8a3 3 0 0 0 6 0V5M7 12a5 5 0 0 0 10 0M12 17v3M9 20h6"></path></svg></div><div><h2>Rode Wireless GO II Microphone System</h2><p>EQ-005 · Creative Technology</p></div><div class="equipment-availability"><strong>2 of 3 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M8 10v4M6 12h4M16 10v.01M18 12v.01"></path></svg></div><div><h2>PlayStation 5</h2><p>EQ-006 · Gaming Consoles and Accessories</p></div><div class="equipment-availability"><strong>2 of 2 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M8 10v4M6 12h4M16 10v.01M18 12v.01"></path></svg></div><div><h2>Arcade Controller</h2><p>EQ-007 · Gaming Consoles and Accessories</p></div><div class="equipment-availability"><strong>2 of 2 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><rect x="7" y="4" width="10" height="16" rx="2"></rect><path d="M10 8h4M10 12h4M10 16h4"></path></svg></div><div><h2>H1 Zoom Kit</h2><p>EQ-008 · Creative Technology</p></div><div class="equipment-availability"><strong>2 of 2 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M8 10v4M6 12h4M16 10v.01M18 12v.01"></path></svg></div><div><h2>M30 Gamepad</h2><p>EQ-009 · Gaming Consoles and Accessories</p></div><div class="equipment-availability"><strong>3 of 3 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><path d="M4 8h13v9H4zM17 11l3-2v7l-3-2"></path><circle cx="10" cy="12.5" r="2.5"></circle></svg></div><div><h2>Owl 3 Video Conference Camera</h2><p>EQ-010 · Creative Technology</p></div><div class="equipment-availability"><strong>2 of 2 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="12" rx="2"></rect><path d="M9 7V5h6v2M9 12h6M12 10v4"></path></svg></div><div><h2>Portable Podcasting Kit (Zoom H6)</h2><p>EQ-011 · Creative Technology</p></div><div class="equipment-availability"><strong>2 of 2 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path><circle cx="12" cy="13.5" r="3"></circle></svg></div><div><h2>SmallRig All-in-One Smartphone Video Kit</h2><p>EQ-012 · Creative Technology</p></div><div class="equipment-availability"><strong>3 of 3 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
-            <article class="equipment-card"><div class="catalog-icon"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M8 10v4M6 12h4M16 10v.01M18 12v.01"></path></svg></div><div><h2>SN30 Pro Gamepad</h2><p>EQ-013 · Gaming Consoles and Accessories</p></div><div class="equipment-availability"><strong>3 of 3 available</strong><span>Ready to borrow</span></div><a class="secondary-action" href="new-loan.html">Check out<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></a></article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path>
+                  <circle cx="12" cy="13.5" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h2>Mirrorless Camera Kit</h2>
+                <p>EQ-001 · Creative Technology</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>3 of 4 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="6" y="3" width="12" height="18" rx="2"></rect>
+                  <path d="M9 8v4M7 10h4M15 10v.01"></path>
+                </svg>
+              </div>
+              <div>
+                <h2>Nintendo Switch</h2>
+                <p>EQ-002 · Gaming Consoles and Accessories</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>3 of 4 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="7" y="4" width="10" height="16" rx="2"></rect>
+                  <path d="M10 8h4M10 12h4M10 16h4"></path>
+                </svg>
+              </div>
+              <div>
+                <h2>H4 Zoom Audio Recording Kit</h2>
+                <p>EQ-003 · Creative Technology</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>2 of 3 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path>
+                  <circle cx="12" cy="13.5" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h2>3D Scanning Kit (Revopoint POP 3 Plus)</h2>
+                <p>EQ-004 · Creative Technology</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>1 of 2 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 5v8a3 3 0 0 0 6 0V5M7 12a5 5 0 0 0 10 0M12 17v3M9 20h6"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h2>Rode Wireless GO II Microphone System</h2>
+                <p>EQ-005 · Creative Technology</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>2 of 3 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                  <path d="M8 10v4M6 12h4M16 10v.01M18 12v.01"></path>
+                </svg>
+              </div>
+              <div>
+                <h2>PlayStation 5</h2>
+                <p>EQ-006 · Gaming Consoles and Accessories</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>2 of 2 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                  <path d="M8 10v4M6 12h4M16 10v.01M18 12v.01"></path>
+                </svg>
+              </div>
+              <div>
+                <h2>Arcade Controller</h2>
+                <p>EQ-007 · Gaming Consoles and Accessories</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>2 of 2 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="7" y="4" width="10" height="16" rx="2"></rect>
+                  <path d="M10 8h4M10 12h4M10 16h4"></path>
+                </svg>
+              </div>
+              <div>
+                <h2>H1 Zoom Kit</h2>
+                <p>EQ-008 · Creative Technology</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>2 of 2 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                  <path d="M8 10v4M6 12h4M16 10v.01M18 12v.01"></path>
+                </svg>
+              </div>
+              <div>
+                <h2>M30 Gamepad</h2>
+                <p>EQ-009 · Gaming Consoles and Accessories</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>3 of 3 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 8h13v9H4zM17 11l3-2v7l-3-2"></path>
+                  <circle cx="10" cy="12.5" r="2.5"></circle>
+                </svg>
+              </div>
+              <div>
+                <h2>Owl 3 Video Conference Camera</h2>
+                <p>EQ-010 · Creative Technology</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>2 of 2 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="5" y="7" width="14" height="12" rx="2"></rect>
+                  <path d="M9 7V5h6v2M9 12h6M12 10v4"></path>
+                </svg>
+              </div>
+              <div>
+                <h2>Portable Podcasting Kit (Zoom H6)</h2>
+                <p>EQ-011 · Creative Technology</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>2 of 2 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 8h16v11H4zM8 8l1.5-3h5L16 8"></path>
+                  <circle cx="12" cy="13.5" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h2>SmallRig All-in-One Smartphone Video Kit</h2>
+                <p>EQ-012 · Creative Technology</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>3 of 3 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
+            <article class="equipment-card">
+              <div class="catalog-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                  <path d="M8 10v4M6 12h4M16 10v.01M18 12v.01"></path>
+                </svg>
+              </div>
+              <div>
+                <h2>SN30 Pro Gamepad</h2>
+                <p>EQ-013 · Gaming Consoles and Accessories</p>
+              </div>
+              <div class="equipment-availability">
+                <strong>3 of 3 available</strong><span>Ready to borrow</span>
+              </div>
+              <a class="secondary-action" href="new-loan.html"
+                >Check out<svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13M13 6l6 6-6 6"></path></svg
+              ></a>
+            </article>
           </section>
         </main>
-        <footer class="page-footer"><p class="footer-brand">LibraryDesk · UAlbany University Libraries</p><p class="copyright">&copy; 2026 UAlbany Library | Team KofN1: Linda Kovacs, Veronica Dindial, Rym Mahiddine, Wendy Ouedraogo, Amari Scott</p></footer>
+        <footer class="page-footer">
+          <p class="footer-brand">LibraryDesk · UAlbany University Libraries</p>
+          <p class="copyright">
+            &copy; 2026 UAlbany Library | Team KofN1: Linda Kovacs, Veronica
+            Dindial, Rym Mahiddine, Wendy Ouedraogo, Amari Scott
+          </p>
+        </footer>
       </div>
     </div>
   </body>

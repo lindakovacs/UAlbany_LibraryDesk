@@ -1235,7 +1235,8 @@ main {
   margin-right: auto;
 }
 
-.loan-overview .secondary-action {
+.loan-overview .secondary-action,
+.loan-panel .secondary-action {
   padding: 0.55rem 0.8rem;
 }
 
@@ -1283,9 +1284,16 @@ main {
 .loan-tools input {
   flex: 1;
   padding: 0.7rem 0.75rem;
+  color: #252525;
+  background: #ffffff;
   border: 1px solid #cfc5d6;
   border-radius: 0.35rem;
   font: inherit;
+}
+
+.loan-tools input:focus {
+  border-color: #46166b;
+  outline: 0.2rem solid rgb(70 22 107 / 18%);
 }
 
 .loan-search-icon {
@@ -1377,14 +1385,31 @@ main {
   stroke-width: 1.8;
 }
 
-.loan-table-container td:first-child strong,
-.loan-table-container td:first-child small {
-  display: inline;
+.loan-table-container th,
+.loan-table-container td {
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
-.loan-table-container td:first-child small {
+.loan-table-container td:first-child {
+  white-space: normal;
+}
+
+.loan-table-container .equipment-details {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.loan-table-container .equipment-details strong,
+.loan-table-container .equipment-details small {
   display: block;
-  margin-left: 3rem;
+}
+
+.loan-table-container td strong,
+.borrower-cell strong {
+  color: #252525;
+  font-weight: 700;
 }
 
 .loan-table-container td small,
@@ -2198,6 +2223,7 @@ tbody tr:last-child td {
     width: 100%;
   }
 
+  .loan-panel .section-heading,
   .borrower-panel .section-heading {
     align-items: stretch;
     flex-direction: column;
@@ -2253,13 +2279,20 @@ tbody tr:last-child td {
 }
 
 .preparation-report-tools input {
-  width: min(100%, 18rem);
-  min-height: 2rem;
-  padding: 0.45rem 0.65rem;
+  width: min(100%, 20rem);
+  min-height: 2.2rem;
+  padding: 0.45rem 0.75rem;
+  color: #252525;
+  background: #ffffff;
   border: 1px solid #cfc5d6;
-  border-radius: 0.3rem;
+  border-radius: 0.35rem;
   font: inherit;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+}
+
+.preparation-report-tools input:focus {
+  border-color: #46166b;
+  outline: 0.2rem solid rgb(70 22 107 / 18%);
 }
 
 .preparation-report-row .in-preparation {
@@ -2291,7 +2324,7 @@ tbody tr:last-child td {
   display: grid;
   gap: 0.35rem;
   color: #5f6872;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
@@ -2302,29 +2335,30 @@ tbody tr:last-child td {
   color: #252525;
   background: #ffffff;
   border: 1px solid #cfc5d6;
-  border-radius: 0.3rem;
+  border-radius: 0.35rem;
   font: inherit;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
 }
 
 .checkout-report-controls button {
   min-height: 2.2rem;
-  padding: 0.45rem 0.8rem;
+  padding: 0.45rem 0.85rem;
   color: #ffffff;
   background: #46166b;
   border: 0;
-  border-radius: 0.3rem;
+  border-radius: 0.35rem;
   font: inherit;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .checkout-report-summary {
-  padding: 0.65rem 1.25rem;
-  color: #756d7c;
+  padding: 0.75rem 1.25rem;
+  color: #6b6474;
   border-top: 1px solid #e8e1ed;
   border-bottom: 1px solid #e8e1ed;
-  font-size: 0.68rem;
+  font-size: 0.8rem;
 }
 
 .checkout-report-summary strong {
@@ -2340,15 +2374,15 @@ tbody tr:last-child td {
 }
 
 .checkout-report td {
-  padding-block: 0.75rem;
-  font-size: 0.72rem;
+  padding-block: 0.85rem;
+  font-size: 0.85rem;
 }
 
 .checkout-report td small {
   display: block;
-  margin-top: 0.2rem;
-  color: #756d7c;
-  font-size: 0.65rem;
+  margin-top: 0.25rem;
+  color: #6b6474;
+  font-size: 0.72rem;
 }
 
 .loan-toolbar {
@@ -2356,13 +2390,13 @@ tbody tr:last-child td {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.7rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   border-bottom: 1px solid #e8e1ed;
 }
 
 .loan-toolbar span {
-  color: #756d7c;
-  font-size: 0.72rem;
+  color: #6b6474;
+  font-size: 0.8rem;
 }
 
 .loan-toolbar b {
@@ -2370,13 +2404,20 @@ tbody tr:last-child td {
 }
 
 .loan-toolbar input {
-  width: min(100%, 12rem);
-  min-height: 2rem;
-  padding: 0.4rem 0.6rem;
+  width: min(100%, 14rem);
+  min-height: 2.2rem;
+  padding: 0.45rem 0.75rem;
+  color: #252525;
+  background: #ffffff;
   border: 1px solid #cfc5d6;
-  border-radius: 0.3rem;
+  border-radius: 0.35rem;
   font: inherit;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+}
+
+.loan-toolbar input:focus {
+  border-color: #46166b;
+  outline: 0.2rem solid rgb(70 22 107 / 18%);
 }
 
 .overview-bottom-grid {
@@ -2390,8 +2431,8 @@ tbody tr:last-child td {
 }
 
 .overview-bottom-grid .overview-section-heading span {
-  color: #756d7c;
-  font-size: 0.7rem;
+  color: #6b6474;
+  font-size: 0.8rem;
 }
 
 .inventory-glance {
@@ -2404,12 +2445,20 @@ tbody tr:last-child td {
 }
 
 .inventory-glance strong {
-  font-size: 0.68rem;
+  color: #252525;
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 
-.inventory-glance span,
+.inventory-glance span {
+  color: #46166b;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .inventory-glance small {
-  font-size: 0.62rem;
+  color: #6b6474;
+  font-size: 0.75rem;
 }
 
 .recent-activity ul {
@@ -2423,34 +2472,36 @@ tbody tr:last-child td {
 .recent-activity li {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.75rem 0;
+  gap: 0.75rem;
+  padding: 0.85rem 0;
   border-bottom: 1px solid #e8e1ed;
 }
 
 .recent-activity li > b {
   display: grid;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.8rem;
+  height: 1.8rem;
   place-items: center;
   color: #46166b;
   background: #f1ebf6;
   border-radius: 50%;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .recent-activity li div {
   display: grid;
-  gap: 0.2rem;
+  gap: 0.25rem;
 }
 
 .recent-activity li strong {
-  font-size: 0.68rem;
+  color: #252525;
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 
 .recent-activity li small {
-  color: #756d7c;
-  font-size: 0.62rem;
+  color: #6b6474;
+  font-size: 0.75rem;
 }
 
 .overview-page .preparation-report-row .status-badge {
@@ -2504,19 +2555,22 @@ tbody tr:last-child td {
 
 .overview-page .overview-section-heading h2 {
   color: #252525;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   font-weight: 700;
+  margin-bottom: 0.25rem;
 }
 
 .overview-page .overview-section-heading p {
   color: #6b6474;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 .overview-page .overview-section-heading a {
-  color: #252525;
-  font-size: 0.68rem;
+  color: #46166b;
+  font-size: 0.85rem;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .overview-page .preparation-report-header,
@@ -2524,7 +2578,7 @@ tbody tr:last-child td {
 .overview-page .overview-loans th {
   color: #6b6474;
   background: #f1ebf6;
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -2534,14 +2588,15 @@ tbody tr:last-child td {
 .overview-page .checkout-report td,
 .overview-page .overview-loans td {
   color: #5f6872;
-  font-size: 0.68rem;
+  font-size: 0.85rem;
+  vertical-align: middle;
 }
 
 .overview-page .preparation-report-row strong,
 .overview-page .checkout-report td:first-child,
 .overview-page .overview-loans td strong {
   color: #252525;
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
@@ -2549,18 +2604,19 @@ tbody tr:last-child td {
 .overview-page .checkout-report td small,
 .overview-page .overview-loans td small {
   color: #6b6474;
-  font-size: 0.62rem;
+  font-size: 0.72rem;
+  margin-top: 0.25rem;
 }
 
 .overview-page .preparation-report-footer,
 .overview-page .overview-table-footer {
   color: #6b6474;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
 }
 
 .overview-page .checkout-report-summary {
   color: #6b6474;
-  font-size: 0.65rem;
+  font-size: 0.8rem;
 }
 
 .overview-page .checkout-report-summary strong {
@@ -2766,22 +2822,24 @@ tbody tr:last-child td {
 
   .overview-actions h2 {
     margin-bottom: 0.25rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #252525;
   }
 
   .overview-actions p {
     margin: 0;
-    color: #756d7c;
-    font-size: 0.75rem;
+    color: #6b6474;
+    font-size: 0.8rem;
   }
 
   .overview-button {
     margin-left: auto;
-    padding: 0.6rem 0.8rem;
+    padding: 0.6rem 0.85rem;
     color: #ffffff;
     background: #46166b;
     border-radius: 0.35rem;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
@@ -2806,13 +2864,21 @@ tbody tr:last-child td {
   }
 
   .overview-section-heading h2 {
-    margin-bottom: 0.2rem;
-    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #252525;
+  }
+
+  .overview-section-heading p {
+    margin: 0;
+    color: #6b6474;
+    font-size: 0.8rem;
   }
 
   .overview-section-heading a {
     color: #46166b;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
@@ -2849,7 +2915,7 @@ tbody tr:last-child td {
 
   .preparation-report-stats strong {
     color: #46166b;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
 
   .preparation-report-stats span,
@@ -2858,7 +2924,7 @@ tbody tr:last-child td {
   .preparation-report-row > span,
   .preparation-report-row time {
     color: #756d7c;
-    font-size: 0.72rem;
+    font-size: 0.75rem;
   }
 
   .preparation-report-header,
@@ -2872,8 +2938,10 @@ tbody tr:last-child td {
 
   .preparation-report-header {
     background: #f7f3fa;
-    color: #756d7c;
-    font-size: 0.68rem;
+    color: #6b6474;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
 
@@ -2888,17 +2956,19 @@ tbody tr:last-child td {
   }
 
   .preparation-report-row strong {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #252525;
   }
 
   .preparation-report-row em,
   .loan-pill {
     width: fit-content;
-    padding: 0.35rem 0.5rem;
+    padding: 0.35rem 0.6rem;
     color: #9a6500;
     background: #fff3d8;
     border-radius: 0.3rem;
-    font-size: 0.68rem;
+    font-size: 0.75rem;
     font-style: normal;
     font-weight: 700;
   }
@@ -2917,7 +2987,7 @@ tbody tr:last-child td {
     padding: 0.8rem 1.25rem;
     color: #756d7c;
     border-top: 1px solid #e8e1ed;
-    font-size: 0.72rem;
+    font-size: 0.75rem;
   }
 
   .preparation-report-footer a {
@@ -2934,15 +3004,31 @@ tbody tr:last-child td {
     min-width: 54rem;
   }
 
+  .overview-loans th,
+  .overview-loans td {
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .overview-loans td:first-child {
+    white-space: normal;
+  }
+
   .overview-loans td strong,
   .overview-loans td small {
     display: block;
   }
 
+  .overview-loans td strong {
+    color: #252525;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
   .overview-loans td small {
     margin-top: 0.25rem;
-    color: #756d7c;
-    font-size: 0.7rem;
+    color: #6b6474;
+    font-size: 0.72rem;
   }
 
   .loan-pill.due {
