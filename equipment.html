@@ -9,78 +9,15 @@
     />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="components.js"></script>
     <title>LibraryDesk | Equipment Collection</title>
   </head>
   <body class="equipment-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="app-shell">
-      <aside class="sidebar" aria-label="Primary">
-        <div class="brand">
-          <a href="index.html" aria-label="LibraryDesk home"
-            ><span class="brand-symbol" aria-hidden="true"
-              ><img src="assets/favicon.svg" alt="" /></span
-            ><span class="brand-copy"
-              ><span class="brand-name">LibraryDesk</span
-              ><small>UAlbany University Libraries</small></span
-            ></a
-          >
-        </div>
-        <nav aria-label="Workspace navigation">
-          <p class="nav-label">Workspace</p>
-          <ul>
-            <li>
-              <a class="nav-item" href="preparation-progress.html"
-                >Preparation</a
-              >
-            </li>
-            <li><a class="nav-item" href="index.html">Overview</a></li>
-            <li>
-              <a class="nav-item" href="equipment.html" aria-current="page"
-                >Equipment</a
-              >
-            </li>
-            <li>
-              <a class="nav-item" href="loans.html">Loans &amp; returns</a>
-            </li>
-            <li><a class="nav-item" href="borrowers.html">Borrowers</a></li>
-          </ul>
-        </nav>
-        <div class="sidebar-footer">
-          <img
-            class="ualbany-logo"
-            src="assets/UAlbany_logo.svg"
-            alt="University at Albany"
-          /><a class="nav-item" href="help.html">Help &amp; support</a>
-          <address>
-            <strong>University Library</strong><br />Uptown Campus · Albany, NY
-          </address>
-        </div>
-      </aside>
+      <app-sidebar current="equipment"></app-sidebar>
       <div class="page-container">
-        <header class="page-header">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <span>Staff workspace</span><span aria-hidden="true">›</span
-            ><strong>Equipment</strong>
-          </nav>
-          <div class="header-actions">
-            <span class="library-status"
-              ><span class="status-dot" aria-hidden="true"></span>Library
-              open</span
-            ><a
-              class="notification-link"
-              href="notifications.html"
-              aria-label="Notifications"
-              >&#128276;</a
-            ><a href="login.html">Sign out</a
-            ><span class="profile-divider" aria-hidden="true"></span
-            ><a class="profile-summary" href="profile.html"
-              ><span class="profile-initials" aria-hidden="true">LK</span
-              ><span
-                ><strong>Linda Kovacs</strong><small>Library staff</small></span
-              ><span aria-hidden="true">⌄</span></a
-            >
-          </div>
-        </header>
+        <app-header breadcrumbs="Equipment"></app-header>
         <main id="main-content">
           <section
             class="page-introduction equipment-introduction"
@@ -377,13 +314,7 @@
             </article>
           </section>
         </main>
-        <footer class="page-footer">
-          <p class="footer-brand">LibraryDesk · UAlbany University Libraries</p>
-          <p class="copyright">
-            &copy; 2026 UAlbany Library | Team KofN1: Linda Kovacs, Veronica
-            Dindial, Rym Mahiddine, Wendy Ouedraogo, Amari Scott
-          </p>
-        </footer>
+        <app-footer></app-footer>
       </div>
     </div>
   </body>
