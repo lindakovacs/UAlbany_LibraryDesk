@@ -69,7 +69,7 @@ Style the completed HTML incrementally.
 Validate each cohesive styling change in a browser and commit it manually as a
 separate focused change.
 
-## 4. Python frontend
+## 4. JavaScript, Python frontend
 
 Add Python server-rendered frontend behavior after the static views are stable.
 
